@@ -32,6 +32,8 @@ gem 'pundit'
 
 gem 'bootstrap-wysihtml5-rails'
 
+gem 'will_paginate-bootstrap'
+
 group :development, :test do
   gem 'launchy'
   gem 'minitest-rails'

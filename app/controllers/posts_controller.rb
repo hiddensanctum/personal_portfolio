@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = policy_scope(Post)
+		@posts = policy_scope(Post).paginate(:page => params[:page], :per_page => 2)
 	end
 
 	def show

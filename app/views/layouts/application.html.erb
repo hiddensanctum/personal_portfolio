@@ -13,7 +13,10 @@
     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 		<%= yield %>
 	</div>
-	    <script type="text/javascript">
+</body>
+</html>
+
+<script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jlchuang'; // required: replace example with your forum shortname
 
@@ -24,6 +27,4 @@
         s.src = '//' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
-    </script>
-</body>
-</html>
+</script>

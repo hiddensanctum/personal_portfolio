@@ -6,11 +6,17 @@
 	<div class="col-md-8">
 	<% @posts.reverse_each do |post| %>
 	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h2><%= link_to post.title, post_path(post) %></h2>
-			<p><b>Date:</b> <%= l post.created_at, format: :short %></p>
-		</div>
 		<div class="panel-body">
+			<h2><%= link_to post.title, post_path(post) %></h2>
+			<div class="pull-left">
+				<i class="glyphicon glyphicon-time"></i> <%= l post.created_at, format: :short %>
+			</div>
+			<div class="pull-right">
+				<i class="glyphicon glyphicon-comment"></i> <%= link_to "Comments",
+    post_path(post, :anchor => "disqus_thread"),
+    :"data-disqus-identifer" => post.id %>
+    	</div>
+    	<br>
 			<p><%= post.body.html_safe %></p>
 		</div>
 		<% if post.published? == false && policy(post).publish?%>
@@ -23,6 +29,9 @@
 	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
 	</div>
 	<% end %>
+	<div class="text-center">
+		<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+	</div>
 	<%= link_to 'New Post', new_post_path, :class => 'btn btn-primary'%>
 	</div>
 	<div class="col-md-4">
@@ -32,4 +41,3 @@
 		</div>
 	</div>
 </div>
-
