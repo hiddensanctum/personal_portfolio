@@ -1,0 +1,21 @@
+<div class="well">
+	<%= form_for(@post) do |f| %>
+	<div class="form-group">
+		<%= f.text_field :title, placeholder: "title", :class => "form-control"%>
+	</div>
+	<div class="form-group">
+		<%= f.text_area :body, placeholder: "title", :class => "form-control", :rows => "20"%>
+	</div>
+	<%= f.submit "Submit", :class => 'btn btn-success' %>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#post_body').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>

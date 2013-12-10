@@ -1,0 +1,29 @@
+<div class="page-header" id="fade">
+	<h1>Into the Eye</h1>
+	<h4>My Dev Stories</h4>
+</div>
+<div class="row">
+	<div class="col-md-8">
+	<% @posts.reverse_each do |post| %>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2><%= link_to post.title, post_path(post) %></h2>
+			<p><b>Date:</b> <%= l post.created_at, format: :short %></p>
+		</div>
+		<div class="panel-body">
+			<p><%= post.body %></p>
+		</div>
+	<%= link_to 'Edit Post', edit_post_path(post), :class => 'btn btn-primary'%>
+	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
+	</div>
+	<% end %>
+	<%= link_to 'New Post', new_post_path, :class => 'btn btn-primary'%>
+	</div>
+	<div class="col-md-4">
+		<div class="panel">
+			<h2>About Me</h2>
+			<p>This is me</p>
+		</div>
+	</div>
+</div>
+
