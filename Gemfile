@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -30,6 +27,22 @@ gem 'jbuilder', '~> 1.2'
 gem 'figaro'
 
 gem 'devise'
+
+gem 'pundit'
+
+gem 'bootstrap-wysihtml5-rails'
+
+group :development, :test do
+  gem 'launchy'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'capybara-webkit'
+  gem "turn"
+  gem 'sqlite3'
+  gem 'simplecov', :require => false
+  gem 'pry-rails'
+  gem 'brakeman'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

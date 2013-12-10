@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+	before_filter :authenticate_user!, except: [:index, :show]
+
 	def index
-		@posts = Post.all
+		@posts = policy_scope(Post)
 	end
 
 	def show
@@ -40,6 +42,6 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:title, :body)
+		params.require(:post).permit(:title, :body, :published)
 	end
 end

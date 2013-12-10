@@ -11,8 +11,14 @@
 			<p><b>Date:</b> <%= l post.created_at, format: :short %></p>
 		</div>
 		<div class="panel-body">
-			<p><%= post.body %></p>
+			<p><%= post.body.html_safe %></p>
 		</div>
+		<% if post.published? == false && policy(post).publish?%>
+			<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'btn btn-warning'%>
+		<% end %>
+		<% if post.published? && policy(post).publish?%>
+			<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
+		<% end %>
 	<%= link_to 'Edit Post', edit_post_path(post), :class => 'btn btn-primary'%>
 	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
 	</div>
