@@ -1,4 +1,6 @@
 NewPortfolio::Application.routes.draw do
+  resources :projects
+
   devise_for :users
   resources :posts
   root :to => "welcome#index"
