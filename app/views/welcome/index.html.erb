@@ -1,4 +1,4 @@
-<div class="profile col-md-7">
+<div class="profile col-md-6">
 	<div class="text-center">
 		<h1 id="nav-tabs">Welcome!</h1>
 	</div>
@@ -6,13 +6,19 @@
 		<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 			<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
 			<li><a href="#skills" data-toggle="tab">Skills</a></li>
-			<li><a href="#contact" data-toggle="tab">Contact</a></li>
 		</ul>
 		<div id="myTabContent" class="tab-content panel-body">
 			<div class="tab-pane fade active in" id="home">
 				<p><img class="img-responsive img-circle" src="assets/picture.jpg"></p>
 				<p>I am a Ruby on Rail Developer currently living in Seatle with a background in Social/Cyber Psychology. I studied at Code Fellows in 2013 and have a BS in Psychology from the University of Maryland.</p>
 				<p>My mission is to bridge the gap between Psychology and Technology to create a more human orientated experience</p>
+				<div class="text-center">
+					<h4>Get in Touch:</h4>
+	        <%= link_to image_tag("email.png"), "mailto:jameschuang13@gmail.com" %>
+	        <%= link_to image_tag("github.png"), "https://github.com/hiddensanctum" %>
+	        <%= link_to image_tag("linkedin.png"), "http://www.linkedin.com/pub/james-chuang/49/249/564" %>
+	        <%= link_to image_tag("twitter.png"), "https://twitter.com/N3dd1h" %>
+	      </div>
 			</div>
 			<div class="tab-pane fade text-center" id="skills">
 		    <div class="row">
@@ -35,13 +41,6 @@
 		      </div>
 		    </div>
 		    <%= render 'proficiency' %>
-			</div>
-			<div class="tab-pane fade text-center" id="contact">
-				<h4>Get in Touch:</h4>
-        <%= link_to image_tag("email.png"), "mailto:jameschuang13@gmail.com" %>
-        <%= link_to image_tag("github.png"), "https://github.com/hiddensanctum" %>
-        <%= link_to image_tag("linkedin.png"), "http://www.linkedin.com/pub/james-chuang/49/249/564" %>
-        <%= link_to image_tag("twitter.png"), "https://twitter.com/N3dd1h" %>
 			</div>
 		</div>
 	</div>
