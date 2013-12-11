@@ -1,5 +1,5 @@
 <div class="page-header fadeIn">
-	<h1>Into the Eye</h1>
+	<h1>Simple, Elegent & With You in Mind</h1>
 	<h4>My Dev Stories</h4>
 </div>
 <div class="row">
@@ -39,11 +39,18 @@
 	<% end %>
 	</div>
 	<div class="col-md-4">
-		<div class="panel panel-default">
+		<div class="row panel panel-default">
 			<div class="panel-body">
 				<h2>About Me</h2>
 				<p>I am a Junior Web Developer specialized in Ruby on Rails, HTML, CSS, and Javascript</p>
+				<p>Graduated from <a href="http://www.codefellows.org">Code Fellows</a> in 2013</p>
 			</div>
+		</div>
+		<div class="row panel panel-default panel-body">
+			<h2>Recent Posts</h2>
+			<% @posts.take(10).reverse_each do |post| %>
+				<li><%= link_to post.title, post_path(post) %></li>
+			<% end %>
 		</div>
 	</div>
 </div>
