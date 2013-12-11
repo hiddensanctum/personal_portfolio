@@ -303,7 +303,16 @@ body {
   font-size: 15px;
   line-height: 1.428571429;
   color: #222222;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
+  display: table;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 input,
@@ -338,6 +347,7 @@ img {
 
 .img-responsive {
   display: block;
+  margin: 0 auto;
   height: auto;
   max-width: 100%;
 }
@@ -5919,6 +5929,7 @@ a.list-group-item.active:focus .list-group-item-text {
   border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  opacity: 0.95;
 }
 
 .panel-body {
