@@ -19,25 +19,29 @@
     	<br>
 			<p><%= post.body.html_safe %></p>
 		</div>
-		<% if post.published? == false && policy(post).publish?%>
-			<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'btn btn-warning'%>
+		<% if current_user.present? %>
+			<% if post.published? == false && policy(post).publish?%>
+				<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'btn btn-warning'%>
+			<% end %>
+			<% if post.published? && policy(post).publish?%>
+				<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
+			<% end %>
+			<%= link_to 'Edit Post', edit_post_path(post), :class => 'btn btn-primary'%>
+			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
 		<% end %>
-		<% if post.published? && policy(post).publish?%>
-			<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
-		<% end %>
-	<%= link_to 'Edit Post', edit_post_path(post), :class => 'btn btn-primary'%>
-	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
 	</div>
 	<% end %>
 	<div class="text-center">
 		<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 	</div>
-	<%= link_to 'New Post', new_post_path, :class => 'btn btn-primary'%>
+	<% if current_user.present? %>
+		<%= link_to 'New Post', new_post_path, :class => 'btn btn-primary'%>
+	<% end %>
 	</div>
 	<div class="col-md-4">
 		<div class="panel">
 			<h2>About Me</h2>
-			<p>This is me</p>
+			<p>I am a Junior Web Developer specialized in Ruby on Rails, HTML, CSS, and Javascript</p>
 		</div>
 	</div>
 </div>
