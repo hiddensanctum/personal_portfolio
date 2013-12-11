@@ -513,7 +513,7 @@ p {
 
 @media (min-width: 768px) {
   .lead {
-    font-size: 22.5px;
+    font-size: 25.5px;
   }
 }
 
@@ -883,7 +883,7 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     /*Change Max Width*/
-    width: 1200px;
+    width: 950px;
   }
 }
 
