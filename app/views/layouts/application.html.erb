@@ -4,6 +4,7 @@
   <title>NewPortfolio</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  Turbolinks.allowLinkExtensions('js');
   <%= csrf_meta_tags %>
 </head>
 <%= render 'layouts/nav' %>
@@ -13,10 +14,7 @@
     <p class="alert"><%= alert %></p>
 		<%= yield %>
 	</div>
-</body>
-</html>
-
-<script type="text/javascript">
+  <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'jlchuang'; // required: replace example with your forum shortname
 
@@ -27,4 +25,6 @@
         s.src = '//' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
-</script>
+  </script>
+</body>
+</html>
