@@ -1,13 +1,22 @@
 # Personal Portfolio
 
 * Work in Progress
+
 by James Chuang
 
 ## Description
 
-This is my personal portfolio and blog website.
+This is my personal portfolio and blog website. The blog portion of the site includes disqus' commenting framework for easy visitor comments and spam filtering. The site is also optimized for mobile and is responsive.
 
 ## Usage
+
+This portfolio site allows the admin to add new blog posts and projects that the admin has done. It requires the admin to sign in so that visitors are not able to randomly add posts or projects.
+
+## Future Features
+
+* Integration with Google Analytics
+* Add custom admin interface
+* Fix Disqus Comment Count
 
 ## Known Issues
 
