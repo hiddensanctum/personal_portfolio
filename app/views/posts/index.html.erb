@@ -17,7 +17,8 @@
     :"data-disqus-identifer" => post.id %>
     	</div>
     	<br>
-			<p><%= post.body.html_safe %></p>
+			<p><%= truncate post.body.html_safe, length: 500 %>
+				<%= link_to 'read more', post %></p>
 		</div>
 		<% if current_user.present? %>
 			<% if post.published? == false && policy(post).publish?%>
