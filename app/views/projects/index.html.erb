@@ -6,7 +6,7 @@
 	<% @projects.reverse_each do |project| %>
 		<div class="col-md-4">
 			<div class="well fadeIn">
-			<h3><%= project.title %></h3>
+			<h3><%= link_to project.title, "http://#{project.url}" %></h3>
 			<%= image_tag project.image_url.to_s, :class => 'img-responsive' %>
 			<b>Technology</b>:
 			<p><%= project.technologies_used %></p>
