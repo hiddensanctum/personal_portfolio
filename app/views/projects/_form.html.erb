@@ -13,6 +13,9 @@
 		<%= f.text_field :technologies_used, placeholder: "technology", :class => "form-control"%>
 	</div>
 	<div class="form-group">
+		<%= f.text_field :github, placeholder: "github", :class => "form-control"%>
+	</div>
+	<div class="form-group">
 		<%= f.text_area :description, placeholder: "description", :class => "form-control", :rows => "20"%>
 	</div>
 	<%= f.submit "Submit", :class => 'btn btn-success' %>
