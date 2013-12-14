@@ -12,6 +12,7 @@
 			<p><%= project.technologies_used %></p>
 			<b>Description</b>:
 			<p><%= project.description %></p>
+			<p><%= link_to image_tag("github.png"), "http://#{project.github}" %></p>
 			<% if current_user.present? %>
 				<%= link_to 'Edit', edit_project_path(project), :class => 'btn btn-primary'%>
 				<%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
