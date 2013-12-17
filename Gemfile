@@ -45,6 +45,8 @@ gem 'unf'
 
 gem 'acts-as-taggable-on'
 
+gem 'newrelic_rpm'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
