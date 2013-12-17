@@ -3,6 +3,8 @@ NewPortfolio::Application.routes.draw do
 
   devise_for :users
   resources :posts
+  get 'tags/:tag', to: 'posts#index', as: :tag
+
   root :to => "welcome#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

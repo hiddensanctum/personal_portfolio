@@ -2,7 +2,11 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 
 	def index
-		@posts = policy_scope(Post).paginate(:page => params[:page], :per_page => 3)
+		if params[:tag]
+    	@posts = policy_scope(Post).tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
+  	else
+    	@posts = policy_scope(Post).paginate(:page => params[:page], :per_page => 3)
+  	end
 	end
 
 	def show
@@ -42,6 +46,6 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:title, :body, :published)
+		params.require(:post).permit(:title, :body, :published, :tag_list)
 	end
 end
