@@ -48,7 +48,7 @@
 				<p>Graduated from <a href="http://www.codefellows.org">Code Fellows</a> in 2013</p>
 			</div>
 		</div>
-		<div class="row panel panel-default panel-body">
+		<div class="row panel panel-default bullet-pad-sm panel-body">
 			<h2>Recent Posts</h2>
 			<% @posts.take(10).reverse_each do |post| %>
 				<li><%= link_to post.title, post_path(post) %></li>
