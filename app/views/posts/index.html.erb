@@ -4,7 +4,7 @@
 </div>
 <div class="row">
 	<div class="col-md-8">
-	<% @posts.reverse_each do |post| %>
+	<% @posts.each do |post| %>
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2><%= link_to post.title, post_path(post) %></h2>
