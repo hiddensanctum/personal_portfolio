@@ -43,19 +43,19 @@
 	<div class="col-md-4">
 		<div class="row panel panel-default">
 			<div class="panel-body">
-				<h2>About Me</h2>
+				<h3>About Me</h3>
 				<p>I am a Junior Web Developer specialized in Ruby on Rails, HTML, CSS, and Javascript</p>
 				<p>Graduated from <a href="http://www.codefellows.org">Code Fellows</a> in 2013</p>
 			</div>
 		</div>
 		<div class="row panel panel-default bullet-pad-sm panel-body">
-			<h2>Recent Posts</h2>
+			<h3>Recent Posts</h3>
 			<% @posts.take(10).reverse_each do |post| %>
 				<li><%= link_to post.title, post_path(post) %></li>
 			<% end %>
 		</div>
 		<div class="row panel panel-default panel-body">
-			<h2>Tags</h2>
+			<h3>Tags</h3>
 			<div id="tag_cloud">
 			  <% tag_cloud Post.tag_counts, %w{s m l} do |tag, css_class| %>
 			    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
