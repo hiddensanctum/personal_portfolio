@@ -5929,7 +5929,7 @@ a.list-group-item.active:focus .list-group-item-text {
   border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  opacity: 0.95;
+  opacity: 0.98;
 }
 
 .panel-body {
