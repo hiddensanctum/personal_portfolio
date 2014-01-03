@@ -8,16 +8,8 @@
 	<div class="panel panel-default">
 		<div class="panel-body">
 			<h2><%= link_to post.title, post_path(post) %></h2>
-			<div class="pull-left">
-				<i class="glyphicon glyphicon-time"></i> <%= l post.created_at, format: :short %>
-			</div>
-			<div class="pull-right">
-				<i class="glyphicon glyphicon-comment"></i> <%= link_to "Comments",
-    post_path(post, :anchor => "disqus_thread"),
-    :"data-disqus-identifer" => post.id %>
-    	</div>
-    	<br>
-			<p><%= post.body.html_safe %><p>
+			<h4><%= l post.created_at, format: :short %></h4>
+			<p><%= post.body.html_safe %></p>
 			<p><b>Tags</b>: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 			<p><%= link_to 'read more', post %> or <%= link_to 'leave a comment', post %></p>
 		</div>
