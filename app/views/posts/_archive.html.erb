@@ -9,7 +9,7 @@
 			<% for article in @posts %>
 				<% if (article.created_at.year != current_year) %>
 					<% if current_year != 0 %>
-						</div>
+						</div></div>
 					<% end %>
 					<% current_year = article.created_at.year %>
 					<div class="accordion-heading">
