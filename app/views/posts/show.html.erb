@@ -6,7 +6,7 @@
 			</div>
 			<div class="panel-body">
 				<p><b>Date:</b> <%= l @post.created_at, format: :short %></p>
-				<p><%= @post.body.html_safe %></p>
+				<p><%= markdown @post.body %></p>
 				<%= link_to 'Back', posts_path, :class => 'btn btn-primary'%>
 			</div>
 		</div>

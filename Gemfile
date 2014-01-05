@@ -31,7 +31,7 @@ gem 'devise'
 
 gem 'pundit'
 
-gem 'bootstrap-wysihtml5-rails'
+#gem 'bootstrap-wysihtml5-rails'
 
 gem 'will_paginate-bootstrap'
 
@@ -46,6 +46,10 @@ gem 'unf'
 gem 'acts-as-taggable-on'
 
 gem 'newrelic_rpm'
+
+gem 'pygments.rb'
+
+gem 'redcarpet'
 
 group :production do
   gem 'rails_12factor'

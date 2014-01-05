@@ -9,7 +9,7 @@
 		<div class="panel-body">
 			<h2><%= link_to post.title, post_path(post) %></h2>
 			<h4><%= l post.created_at, format: :short %></h4>
-			<p><%= post.body.html_safe %></p>
+			<p><%= markdown post.body %></p>
 			<p><b>Tags</b>: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 			<p><%= link_to 'read more', post %> or <%= link_to 'leave a comment', post %></p>
 		</div>
@@ -42,7 +42,7 @@
 		</div>
 		<div class="row panel panel-default bullet-pad-sm panel-body">
 			<h3>Recent Posts</h3>
-			<% @posts.take(10).reverse_each do |post| %>
+			<% @posts.take(5).each do |post| %>
 				<li><%= link_to post.title, post_path(post) %></li>
 			<% end %>
 		</div>
