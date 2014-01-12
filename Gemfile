@@ -51,6 +51,8 @@ gem 'pygments.rb'
 
 gem 'redcarpet'
 
+gem 'foundation-rails'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'

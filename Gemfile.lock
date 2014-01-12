@@ -90,6 +90,9 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
+    foundation-rails (5.0.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     haml (4.0.3)
       tilt
     highline (1.6.20)
@@ -248,6 +251,7 @@ DEPENDENCIES
   devise
   figaro
   fog
+  foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
   launchy
