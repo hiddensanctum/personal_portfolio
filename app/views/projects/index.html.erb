@@ -3,11 +3,11 @@
 		<h3>Projects</h3>
 	</div>
 	<div class="medium-10 large-10 column">
-		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 text-center">
+		<ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 text-center">
 			<% @projects.reverse_each do |project| %>
 				<li>
 					<a href="#" class="th" data-reveal-id="<%= project.id %>">
-						<%= image_tag project.image_url.to_s %>
+						<%= image_tag project.image_url(:thumb).to_s %>
 						<h6><%= project.title %></h6>
 					</a>
 				</li>
