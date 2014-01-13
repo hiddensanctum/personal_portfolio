@@ -33,7 +33,9 @@ gem 'pundit'
 
 #gem 'bootstrap-wysihtml5-rails'
 
-gem 'will_paginate-bootstrap'
+gem 'will_paginate'
+
+gem 'foundation-will_paginate'
 
 gem 'carrierwave'
 
@@ -68,6 +70,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'pry-rails'
   gem 'brakeman'
+  gem 'pry'
 end
 
 group :doc do

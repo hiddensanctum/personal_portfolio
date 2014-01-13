@@ -1,28 +1,14 @@
-<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">James Chuang</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href= <%=posts_path %> >Blog</a></li>
-        <li><a href= <%=projects_path %> >Portfolio</a></li>
-        <li><a href="https://s3-us-west-2.amazonaws.com/jlc-portfolio/uploads/resume/James_Chuang_Resume.pdf" >Resume</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user.present? %>
-        <!-- <li>Logged in as <%= current_user.email %></li> -->
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container -->
-</nav>
+<div class="row">
+  <h1>James Chuang</h1>
+  <div class="medium-6 large-6 column">
+    <h5>Ruby on Rails Web Developer</h5>
+  </div>
+  <div class="medium-6 large-6 column">
+    <dl class="sub-nav right">
+      <dd><h5><a href="/">Home</a></h5></dd>
+      <dd><h5><a href="/posts">Blog</a></h5></dd>
+      <dd><h5><a href="/projects">Projects</a></h5></dd>
+      <dd><h5><a href="#">Resume</a></h5></dd>
+    </dl>
+  </div>
+</div>

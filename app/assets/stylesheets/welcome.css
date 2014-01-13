@@ -1,3 +1,11 @@
+.container{
+	padding: 20px;
+	max-width: 900px;
+}
+.padding{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 .vertical-center{
 	width: auto;
 	height: auto;
@@ -5,4 +13,12 @@
 }
 .profile{
 	padding-top: 1px;
+}
+.line_break{
+	border-width:1px;
+	border-bottom-style:solid;
+	border-color:#98bf21;
+}
+.img-circle {
+  border-radius: 50%;
 }

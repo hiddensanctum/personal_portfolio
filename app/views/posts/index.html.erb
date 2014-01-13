@@ -1,61 +1,26 @@
-<div class="page-header fadeIn text-center">
-	<h1>Simple, Elegant & With You in Mind</h1>
-	<h4>My Dev Stories</h4>
-</div>
 <div class="row">
-	<div class="col-md-8">
 	<% @posts.each do |post| %>
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<h2><%= link_to post.title, post_path(post) %></h2>
-			<h4><%= l post.created_at, format: :short %></h4>
+		<div class="medium-3 large-3 column text-right">
+			<h4><%= l post.created_at, format: :long %></h4>
+			<h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
+		</div>
+		<div class="medium-9 large-9 column">
+
+			<h3><%= link_to post.title, post_path(post) %></h3>
 			<p><%= markdown post.body %></p>
-			<p><b>Tags</b>: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+
 			<p><%= link_to 'read more', post %> or <%= link_to 'leave a comment', post %></p>
+			<% if current_user.present? %>
+				<% if post.published? == false && policy(post).publish?%>
+					<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'button'%>
+				<% end %>
+				<% if post.published? && policy(post).publish?%>
+					<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'button success' %>
+				<% end %>
+				<%= link_to 'Edit Post', edit_post_path(post), :class => 'button'%>
+				<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button alert'%>
+			<% end %>
 		</div>
-		<% if current_user.present? %>
-			<% if post.published? == false && policy(post).publish?%>
-				<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'btn btn-warning'%>
-			<% end %>
-			<% if post.published? && policy(post).publish?%>
-				<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'btn btn-warning' %>
-			<% end %>
-			<%= link_to 'Edit Post', edit_post_path(post), :class => 'btn btn-primary'%>
-			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'%>
-		<% end %>
-	</div>
 	<% end %>
-	<div class="text-center">
-		<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-	</div>
-	<% if current_user.present? %>
-		<%= link_to 'New Post', new_post_path, :class => 'btn btn-primary'%>
-	<% end %>
-	</div>
-	<div class="col-md-4">
-		<div class="row panel panel-default">
-			<div class="panel-body">
-				<h3>About Me</h3>
-				<p>I am a Junior Web Developer specialized in Ruby on Rails, HTML, CSS, and Javascript</p>
-				<p>Graduated from <a href="http://www.codefellows.org">Code Fellows</a> in 2013</p>
-			</div>
-		</div>
-		<div class="row panel panel-default bullet-pad-sm panel-body">
-			<h3>Recent Posts</h3>
-			<% @posts.take(5).each do |post| %>
-				<li><%= link_to post.title, post_path(post) %></li>
-			<% end %>
-		</div>
-		<div class="row panel panel-default panel-body">
-			<h3>Tags</h3>
-			<div id="tag_cloud">
-			  <% tag_cloud policy_scope(Post).tag_counts, %w{s m l} do |tag, css_class| %>
-			    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-			  <% end %>
-			</div>
-		</div>
-		<div class="row panel panel-default panel-body">
-			<%= render 'archive' %>
-		</div>
-	</div>
+	<%= foundation_paginate @posts %>
 </div>
