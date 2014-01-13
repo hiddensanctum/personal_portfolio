@@ -33,3 +33,6 @@
 		<%= foundation_paginate @posts %>
 	</div>
 </div>
+<% if current_user.present? %>
+	<%= link_to 'New Post', new_post_path, :class => 'button'%>
+<% end %>
