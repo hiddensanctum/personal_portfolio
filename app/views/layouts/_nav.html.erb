@@ -9,6 +9,9 @@
       <dd><h5><a href="/posts">Blog</a></h5></dd>
       <dd><h5><a href="/projects">Projects</a></h5></dd>
       <dd><h5><a href="https://s3-us-west-2.amazonaws.com/jlc-portfolio/uploads/resume/James_Chuang_Resume.pdf">Resume</a></h5></dd>
+      <% if current_user.present? %>
+        <dd><h5><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a></h5></dd>
+      <% end %>
     </dl>
   </div>
 </div>
