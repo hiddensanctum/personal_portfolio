@@ -11,14 +11,6 @@
 	height: auto;
 	vertical-align: middle;
 }
-.profile{
-	padding-top: 1px;
-}
-.line_break{
-	border-width:1px;
-	border-bottom-style:solid;
-	border-color:#98bf21;
-}
 .img-circle {
   border-radius: 50%;
 }

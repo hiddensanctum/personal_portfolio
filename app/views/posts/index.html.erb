@@ -1,4 +1,9 @@
 <div class="row">
+	<div class="right">
+	  <h4><small>Popular Tags: <%= raw policy_scope(Post).tag_counts_on(:tags).order('count desc').limit(10).map { |t| link_to t, tag_path(t.to_s) }.join(', ') %></small></h4>
+	</div>
+</div>
+<div class="row">
 	<% @posts.each do |post| %>
 		<div class="medium-3 large-3 column text-right">
 			<h4><%= l post.created_at, format: :long %></h4>
@@ -6,7 +11,7 @@
 		</div>
 		<div class="medium-9 large-9 column">
 
-			<h3><%= link_to post.title, post_path(post) %></h3>
+			<h2><%= link_to post.title, post_path(post) %></h2>
 			<p><%= markdown post.body %></p>
 
 			<p><%= link_to 'read more', post %> or <%= link_to 'leave a comment', post %></p>
@@ -22,5 +27,9 @@
 			<% end %>
 		</div>
 	<% end %>
-	<%= foundation_paginate @posts %>
+</div>
+<div class="row">
+	<div class="right">
+		<%= foundation_paginate @posts %>
+	</div>
 </div>

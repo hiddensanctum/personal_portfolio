@@ -1,21 +1,12 @@
 <div class="row">
-	<div class="col-md-7">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h1><%= @post.title %></h1>
-			</div>
-			<div class="panel-body">
-				<p><b>Date:</b> <%= l @post.created_at, format: :short %></p>
-				<p><%= markdown @post.body %></p>
-				<%= link_to 'Back', posts_path, :class => 'btn btn-primary'%>
-			</div>
-		</div>
+	<div class="medium-3 large-3 column text-right">
+		<h2><%= @post.title %></h2>
+		<h3><small><%= l @post.created_at, format: :long %></small></h3>
+		<h4><small>Tags: <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
 	</div>
-	<div class="col-md-5">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<%= render 'thread' %>
-			</div>
-		</div>
+	<div class="medium-3 large-9 column">
+		<p><%= markdown @post.body %></p>
+		<%= link_to 'Back', posts_path, :class => 'button'%>
+		<%= render 'thread' %>
 	</div>
 </div>
