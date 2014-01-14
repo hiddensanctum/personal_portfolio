@@ -1,5 +1,8 @@
 <div class="row">
-	<div class="right">
+	<div class="text-right">
+		<% if current_user.present? %>
+			<h6><%= link_to image_tag("new.png") + "New Post", new_post_path %></h6>
+		<% end %>
 	  <h4><small>Popular Tags: <%= raw policy_scope(Post).tag_counts_on(:tags).order('count desc').limit(10).map { |t| link_to t, tag_path(t.to_s) }.join(', ') %></small></h4>
 	</div>
 </div>
@@ -8,23 +11,21 @@
 		<div class="medium-3 large-3 column text-right">
 			<h4><%= l post.created_at, format: :long %></h4>
 			<h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
-		</div>
-		<div class="medium-9 large-9 column">
-
-			<h2><%= link_to post.title, post_path(post) %></h2>
-			<p><%= markdown post.body %></p>
-
-			<p><%= link_to 'leave a comment', post %></p>
 			<% if current_user.present? %>
 				<% if post.published? == false && policy(post).publish?%>
-					<%= link_to 'Publish', post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}, :class => 'button'%>
+					<%= link_to image_tag("publish.png"), post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}%>
 				<% end %>
 				<% if post.published? && policy(post).publish?%>
-					<%= link_to 'Unpublish', post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'}, :class => 'button success' %>
+					<%= link_to image_tag("unpublish.png"), post_path(post, post: { published: false }), method: :put, data: { confirm: 'Are you sure you want to unpublish?'} %>
 				<% end %>
-				<%= link_to 'Edit Post', edit_post_path(post), :class => 'button'%>
-				<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button alert'%>
+				<%= link_to image_tag("edit.png"), edit_post_path(post) %>
+				<%= link_to image_tag("delete.png"), post, method: :delete, data: { confirm: 'Are you sure?' } %>
 			<% end %>
+		</div>
+		<div class="medium-9 large-9 column">
+			<h2><%= link_to post.title, post_path(post) %></h2>
+			<p><%= markdown post.body %></p>
+			<p><%= link_to 'leave a comment', post %></p>
 		</div>
 	<% end %>
 </div>
@@ -33,6 +34,3 @@
 		<%= foundation_paginate @posts %>
 	</div>
 </div>
-<% if current_user.present? %>
-	<%= link_to 'New Post', new_post_path, :class => 'button'%>
-<% end %>
