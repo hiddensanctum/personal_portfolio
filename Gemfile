@@ -26,34 +26,20 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'figaro'
-
 gem 'devise'
-
 gem 'pundit'
-
-#gem 'bootstrap-wysihtml5-rails'
-
 gem 'will_paginate'
-
 gem 'foundation-will_paginate'
-
 gem 'carrierwave'
-
 gem 'rmagick'
-
 gem 'fog'
-
 gem 'unf'
-
 gem 'acts-as-taggable-on'
-
 gem 'newrelic_rpm'
-
 gem 'pygments.rb'
-
 gem 'redcarpet'
-
 gem 'foundation-rails'
+gem 'friendly_id'
 
 group :production do
   gem 'rails_12factor'
