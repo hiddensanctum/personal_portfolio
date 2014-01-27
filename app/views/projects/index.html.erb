@@ -2,7 +2,7 @@
 	<div class="medium-2 large-2 column text-right">
 		<h3>Projects</h3>
 		<% if current_user.present? %>
-			<h6><%= link_to image_tag("new.png") + "New Project", new_post_path %></h6>
+			<h6><%= link_to image_tag("new.png") + "New Project", new_project_path %></h6>
 		<% end %>
 	</div>
 	<div class="medium-10 large-10 column">
@@ -27,7 +27,10 @@
 						<p><%= project.technologies_used %></p>
 						<h5>Description:</h5>
 						<p><%= markdown project.description.to_s %></p>
-						<p><%= link_to image_tag("github.png"), "http://#{project.github}" %></p>
+						<ul class="inline-list text-center">
+							<li><%= link_to image_tag("website.png"), "http://#{project.github}" %>Website</li>
+							<li><%= link_to image_tag("github.png"), "http://#{project.github}" %>Github</li>
+						</ul>
 					</div>
 					<div class="large-8 column">
 						<%= image_tag project.image_url.to_s, :class => 'img-responsive' %>
