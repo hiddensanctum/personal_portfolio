@@ -2,11 +2,16 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 
 	def index
-		if params[:tag]
-    	@posts = policy_scope(Post).order('created_at DESC').tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
-  	else
-    	@posts = policy_scope(Post).order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
-  	end
+		if current_user.present?
+			@posts = policy_scope(Post).order('created_at DESC')
+			render 'admin'
+		else
+			if params[:tag]
+	    	@posts = policy_scope(Post).order('created_at DESC').tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
+	  	else
+	    	@posts = policy_scope(Post).order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
+	  	end
+	  end
 	end
 
 	def show
