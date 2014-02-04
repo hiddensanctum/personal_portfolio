@@ -16,7 +16,6 @@ This portfolio site allows the admin to add new blog posts and projects that the
 
 * Integration with Google Analytics
 * Add custom admin interface
-* Fix Disqus Comment Count
 
 ## Known Issues
 
