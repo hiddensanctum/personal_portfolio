@@ -18,7 +18,7 @@
 	  <tbody>
 	  	<% @posts.each do |post| %>
 	    <tr>
-	      <td><%= l post.created_at, format: :long %></td>
+	      <td><%= l post.created_at, format: :admin %></td>
 	      <td><%= link_to post.title, post_path(post) %></td>
 	      <td><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
 	      <td>
