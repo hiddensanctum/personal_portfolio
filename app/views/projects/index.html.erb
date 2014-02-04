@@ -10,7 +10,9 @@
 			<% @projects.reverse_each do |project| %>
 				<li>
 					<a href="#" class="th" data-reveal-id="<%= project.id %>">
-						<%= image_tag project.image_url(:thumb).to_s %>
+						<% cache(project) do %>
+							<%= image_tag project.image_url(:thumb).to_s %>
+						<% end %>
 						<h6><%= project.title %></h6>
 					</a>
 					<% if current_user.present? %>
