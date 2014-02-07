@@ -26,7 +26,7 @@
 					<div class="large-4 column">
 						<h2><%= link_to project.title, "http://#{project.url}" %></h2>
 						<h5>Technology:</h5>
-						<p><%= render 'tech', :tech => project.technologies_used %></p>
+						<p><%= render 'tech', :techlist => project.technologies_used %></p>
 						<h5>Description:</h5>
 						<p><%= markdown project.description.to_s %></p>
 						<ul class="inline-list text-center">
