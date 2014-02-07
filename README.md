@@ -19,7 +19,7 @@ This portfolio site allows the admin to add new blog posts and projects that the
 
 ## Known Issues
 
-* Disqus Comment Count does not show unless refresh due to turbolinks (be great if someone knew how to fix this)
+* None as of now
 
 ## Authors
 
