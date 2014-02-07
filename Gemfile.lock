@@ -146,8 +146,6 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry-rails (0.3.2)
-      pry (>= 0.9.10)
     pundit (0.2.1)
       activesupport (>= 3.0.0)
     pygments.rb (0.5.4)
@@ -263,7 +261,6 @@ DEPENDENCIES
   newrelic_rpm
   pg
   pry
-  pry-rails
   pundit
   pygments.rb
   rails (= 4.0.1)

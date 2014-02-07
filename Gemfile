@@ -54,7 +54,6 @@ group :development, :test do
   gem "turn"
   gem 'sqlite3'
   gem 'simplecov', :require => false
-  gem 'pry-rails'
   gem 'brakeman'
   gem 'pry'
 end
