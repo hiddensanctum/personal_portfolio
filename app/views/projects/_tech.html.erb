@@ -1,7 +1,19 @@
-<% techlist.split(',').each do |tech| %>
-<% if tech == 'Ruby on Rails' %>
-	<img class="img-responsive img-portfolio" src="assets/rubyonrails.png"><%= tech %>
-<% else %>
-	<%= tech %>
-<% end %>
-<% end %>
+<ul class="small-block-grid-6 text-center">
+	<% techlist.split(',').each do |tech| %>
+		<% if tech == 'Ruby on Rails' %>
+			<li><img class="img-responsive img-portfolio" src="assets/rubyonrails.png"><%= tech %></li>
+		<% elsif tech == 'HTML' %>
+			<li><img class="img-responsive img-portfolio" src="assets/html.png">HTML</li>
+		<% elsif tech == 'CSS' %>
+			<li><img class="img-responsive img-portfolio" src="assets/css.png">CSS</li>
+		<% elsif tech == 'Javascript' %>
+			<li><img class="img-responsive img-portfolio" src="assets/javascript.png">Javascript</li>
+		<% elsif tech == 'Ember.js' %>
+			<li><img class="img-responsive img-portfolio" src="assets/emberjs.png">Ember.js</li>
+		<% elsif tech == 'Phonegap' %>
+			<li><img class="img-responsive img-portfolio" src="assets/phonegap.png">Phonegap</li>
+		<% else %>
+			<%= tech %>
+		<% end %>
+	<% end %>
+</ul>
