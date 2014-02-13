@@ -32,6 +32,7 @@
 						<p><%= markdown project.description.to_s %></p>
 						<h5>Technology:</h5>
 						<p><%= render 'tech', :techlist => project.technologies_used %></p>
+						<h5>Links:</h5>
 						<ul class="inline-list text-center">
 							<li><%= link_to image_tag("website.png"), "http://#{project.url}" %>Website</li>
 							<li><%= link_to image_tag("github.png"), "http://#{project.github}" %>Github</li>
