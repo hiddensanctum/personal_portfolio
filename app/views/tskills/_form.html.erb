@@ -1,0 +1,7 @@
+<%= form_for(@tskill) do |f| %>
+  <%= f.file_field :skill_icon %>
+  <%= f.text_field :name, placeholder: "name"%>
+  <p>Exploring: <%= f.check_box :exploring %></p>
+	<%= f.submit "Submit", :class => 'button success' %>
+<% end %>
+

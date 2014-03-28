@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-    @tskills = Tskills.all.order('created_at ASC')
+    @tskills = Tskill.all.order('created_at ASC')
 	end
 end
