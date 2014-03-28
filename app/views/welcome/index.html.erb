@@ -28,8 +28,19 @@
 					<% if tskill.exploring %>
 						<span>(exploring)</span>
 					<% end %>
+					<p>
+						<% if current_user.present? %>
+							<%= link_to image_tag("edit.png"), edit_tskill_path(tskill) %>
+							<%= link_to image_tag("delete.png"), tskill, method: :delete, data: { confirm: 'Are you sure?' } %>
+						<% end %>
+					</p>
 				</li>
 			<% end %>
+			<li>
+				<% if current_user.present? %>
+					<h6><%= link_to image_tag("new.png") + "New Technical Skills", new_tskill_path %></h6>
+				<% end %>
+			</li>
 		</ul>
 	</div>
 </div>

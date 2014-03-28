@@ -9,7 +9,7 @@ class TskillsController < ApplicationController
     @tskill = Tskill.new(tskill_params)
 
     if @tskill.save
-      redirect_to tskills_path
+      redirect_to posts_path
     end
   end
 
@@ -21,7 +21,7 @@ class TskillsController < ApplicationController
     @tskill = Tskill.find(params[:id])
 
     if @tskill.update_attributes(tskill_params)
-      redirect_to tskills_path
+      redirect_to posts_path
     end
   end
 
@@ -29,11 +29,11 @@ class TskillsController < ApplicationController
     @tskill = Tskill.find(params[:id])
     @tskill.destroy
 
-    redirect_to tskills_path
+    redirect_to posts_path
   end
 
   private
   def tskill_params
-    params.require(:tskill).permit(:name, :skill_icon)
+    params.require(:tskill).permit(:name, :skill_icon, :exploring)
   end
 end
