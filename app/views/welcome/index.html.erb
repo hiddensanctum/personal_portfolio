@@ -21,12 +21,15 @@
 	</div>
 	<div class="medium-9 large-9 column">
 		<ul class="small-block-grid-4 medium-block-grid-4 large-block-grid-6 text-center">
-			<li><img class="img-responsive img-portfolio" src="assets/rubyonrails.png">Ruby on Rails</li>
-			<li><img class="img-responsive img-portfolio" src="assets/html.png">HTML</li>
-			<li><img class="img-responsive img-portfolio" src="assets/css.png">CSS</li>
-			<li><img class="img-responsive img-portfolio" src="assets/javascript.png">Javascript</li>
-			<li><img class="img-responsive img-portfolio" src="assets/emberjs.png">Ember.js (exploring)</li>
-			<li><img class="img-responsive img-portfolio" src="assets/phonegap.png">Phonegap (exploring)</li>
+			<% @tskills.each do |tskill| %>
+				<li><%= image_tag tskill.image_url.to_s %><%= tskill.name %></li>
+				<li><img class="img-responsive img-portfolio" src="assets/rubyonrails.png">Ruby on Rails</li>
+				<li><img class="img-responsive img-portfolio" src="assets/html.png">HTML</li>
+				<li><img class="img-responsive img-portfolio" src="assets/css.png">CSS</li>
+				<li><img class="img-responsive img-portfolio" src="assets/javascript.png">Javascript</li>
+				<li><img class="img-responsive img-portfolio" src="assets/emberjs.png">Ember.js (exploring)</li>
+				<li><img class="img-responsive img-portfolio" src="assets/phonegap.png">Phonegap (exploring)</li>
+			<% end %>
 		</ul>
 	</div>
 </div>
