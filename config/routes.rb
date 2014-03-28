@@ -1,4 +1,6 @@
 NewPortfolio::Application.routes.draw do
+  resources :tskills
+
   resources :projects
 
   devise_for :users

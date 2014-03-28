@@ -1,0 +1,2 @@
+class TskillsController < ApplicationController
+end
