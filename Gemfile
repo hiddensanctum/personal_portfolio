@@ -38,7 +38,6 @@ gem 'acts-as-taggable-on'
 gem 'newrelic_rpm'
 gem 'pygments.rb'
 gem 'redcarpet'
-gem 'foundation-rails'
 gem 'friendly_id', '~> 5.0.0'
 
 group :production do

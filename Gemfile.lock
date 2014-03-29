@@ -90,9 +90,6 @@ GEM
       nokogiri (~> 1.5)
       ruby-hmac
     formatador (0.2.4)
-    foundation-rails (5.0.2.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0)
     foundation-will_paginate (0.0.1)
     friendly_id (5.0.2)
       activerecord (~> 4.0.0)
@@ -250,7 +247,6 @@ DEPENDENCIES
   devise
   figaro
   fog
-  foundation-rails
   foundation-will_paginate
   friendly_id (~> 5.0.0)
   jbuilder (~> 1.2)
