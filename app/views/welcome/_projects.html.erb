@@ -1,0 +1,15 @@
+<div class="medium-8 large-4 columns sidebar">
+  <div class="sidebar-text">
+    <h1>Projects</h1>
+    <h2><%= @project.title %></h2>
+    <div class="img-monitor">
+      <img class="img-responsive img-monitor" src="assets/monitor.png">
+      <%= image_tag(@project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+      <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
+    </div>
+    <p><%= markdown @project.description.to_s %></p>
+    <div class="text-center">
+      <%= link_to "More", projects_path, class: "button" %>
+    </div>
+  </div>
+</div>

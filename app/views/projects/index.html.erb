@@ -10,10 +10,13 @@
 			<% @projects.reverse_each do |project| %>
 				<li>
 					<a href="#" class="th" data-reveal-id="<%= project.id %>">
-						<% cache(project) do %>
-							<%= image_tag project.image_url(:thumb).to_s %>
-						<% end %>
-						<h6><%= project.title %></h6>
+    <h2><%= project.title %></h2>
+    <div class="img-monitor">
+      <img class="img-responsive img-monitor" src="assets/monitor.png">
+      <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+      <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
+    </div>
+    <p><%= markdown project.description.to_s %></p>
 					</a>
 					<% if current_user.present? %>
 						<%= link_to image_tag("edit.png"), edit_project_path(project) %>
@@ -21,7 +24,6 @@
 					<% end %>
 				</li>
 
-				<!-- Modal for Each Project -->
 				<div id="<%= project.id %>" class="reveal-modal" data-reveal>
 					<div class="large-8 column right">
 						<%= image_tag project.image_url.to_s, :class => 'img-responsive' %>

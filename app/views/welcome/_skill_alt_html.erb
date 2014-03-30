@@ -1,0 +1,64 @@
+<div class="medium-8 large-4 columns sidebar blue">
+  <div class="sidebar-text">
+    <div class="row text-center">
+    <div class="row text-center">
+      <h3>Technical Skills</h3>
+    </div>
+    <ul class="small-block-grid-3 medium-block-grid-6 large-block-grid-6 text-center">
+      <% @tskills.each do |tskill| %>
+        <li>
+          <%= image_tag tskill.skill_icon_url.to_s %>
+          <span><%= tskill.name %></span>
+          <% if tskill.exploring %>
+            <span>(exploring)</span>
+          <% end %>
+          <p>
+            <% if current_user.present? %>
+              <%= link_to image_tag("edit.png"), edit_tskill_path(tskill) %>
+              <%= link_to image_tag("delete.png"), tskill, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+      <li>
+        <% if current_user.present? %>
+          <h6><%= link_to image_tag("new.png") + "New Technical Skills", new_tskill_path %></h6>
+        <% end %>
+      </li>
+    </ul>
+      <h4>Other Skills</h4>
+      <ul class="small-block-grid-3 medium-block-grid-6 large-block-grid-6 text-center">
+        <li><img class="img-responsive img-portfolio" src="assets/chinese.png">Fluent in Mandarin Chinese</li>
+      </ul>
+    </div>
+    <div class="row text-center">
+      <h4>Interest</h4>
+      <ul class="small-block-grid-3 medium-block-grid-6 large-block-grid-6 text-center">
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/Airplane.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="I love to travel!">Travel</span>
+        </li>
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/Games.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="From RPGs to Racing Simulators, As long as it has a good story I am there">Avid Gamer</span>
+        </li>
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/Videos.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="I enjoy Anime and Asian Dramas in my spare time. A big fan of Sci-fi stuff too like Firefly!">Anime & Drama</span>
+        </li>
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/Camera.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="I consider myself an amauter photographer, I would love to learn more though">Photography</span>
+        </li>
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/Headphones.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="Music is a big part of my life. Although I am not good at playing, I couldn't imagine my life without music">Music</span>
+        </li>
+        <li>
+          <img class="img-responsive img-portfolio" src="assets/iPhone.png">
+          <span data-tooltip data-options="disable_for_touch:true" class="has-tip tip-top" title="The latest and greatest gadgets are awesome">Gadgets</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

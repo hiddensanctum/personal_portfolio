@@ -8,15 +8,15 @@
 
     <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div class="row container">
-      <%= render 'layouts/nav' %>
+    <%= render 'layouts/nav' %>
+
       <%= yield %>
-    </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
