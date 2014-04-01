@@ -54,12 +54,12 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
-  color: #222222;
   padding: 0;
-  margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background: #1F2325;
+  color: #fff;
+  margin: 0px;
   font-style: normal;
   line-height: 1;
   position: relative;
