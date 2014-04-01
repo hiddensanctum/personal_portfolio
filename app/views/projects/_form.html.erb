@@ -1,10 +1,11 @@
-<%= form_for(@project) do |f| %>
-	<%= f.text_field :title, placeholder: "title"%>
-  <%= f.file_field :image %>
-	<%= f.text_field :url, placeholder: "url"%>
-	<%= f.text_field :technologies_used, placeholder: "technology"%>
-	<%= f.text_field :github, placeholder: "github"%>
-	<%= f.text_area :description, placeholder: "description", :style => "height: 300px"%>
-	<%= f.submit "Submit", :class => 'button success' %>
-<% end %>
-
+<div class="medium-8 large-4 columns pag">
+  <%= form_for(@project) do |f| %>
+  	<%= f.text_field :title, placeholder: "title"%>
+    <%= f.file_field :image %>
+  	<%= f.text_field :url, placeholder: "url"%>
+  	<%= f.text_field :technologies_used, placeholder: "technology"%>
+  	<%= f.text_field :github, placeholder: "github"%>
+  	<%= f.text_area :description, placeholder: "description", :style => "height: 300px"%>
+  	<%= f.submit "Submit", :class => 'button success' %>
+  <% end %>
+</div>

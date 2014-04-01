@@ -19,10 +19,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
   color: #fff;
 }
-footer {
-  background-color: #1BB4F0;
-  height: 100px;
-}
 .absolute-center {
   position: absolute;
   text-align: center;
@@ -52,11 +48,11 @@ footer {
   background-color: #0177A4;
   color: #fff;
 }
-.sidebar {
-  padding: 15px;
-}
 .sidebar-text {
   padding: 15px;
+}
+.columns {
+  padding: 0;
 }
 .img-monitor {
   position: relative;
@@ -79,20 +75,43 @@ footer {
 a:hover.button {
   background: rgba(0,0,0,1.0);
 }
+.left {
+  padding: 0 10px;
+}
+.right {
+  padding: 0 10px;
+}
+.pag {
+  padding: 10px 10px 0 10px;
+}
+.pagination-centered {
+  padding-top: 10px;
+}
+.sidebar-bottom {
+  padding: 10px;
+}
+.sidebar-top {
+  padding: 10px;
+}
 @media only screen and (min-width: 40.063em) {
   .sidebar {
     height: 100%;
     display:table;
   }
-  .sidebar-text {
-    position: relative;
+  .sidebar-row {
+    display: table-row;
+  }
+  .sidebar-bottom {
     display:table-cell;
     vertical-align:bottom;
   }
+  .sidebar-top {
+    display:table-cell;
+    vertical-align: top;
+  }
+  .columns {
+    height: 100%;
+  }
 }
 @media only screen and (min-width: 64.063em) {
-  .nav {
-    position: absolute;
-    top: 0;
-  }
 }

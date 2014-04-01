@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @projects = Project.all.order('created_at ASC')
+    @page_title = 'Projects'
+    @projects = Project.all.order('created_at ASC').paginate(:page => params[:page], :per_page => 6)
   end
 
   def new

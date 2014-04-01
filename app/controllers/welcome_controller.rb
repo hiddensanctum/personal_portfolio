@@ -3,5 +3,6 @@ class WelcomeController < ApplicationController
     @tskills = Tskill.all.order('created_at ASC')
     @project = Project.last
     @post = Post.last
+    @page_title = 'Home'
 	end
 end

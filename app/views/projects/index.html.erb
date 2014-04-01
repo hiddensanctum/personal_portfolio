@@ -1,48 +1,22 @@
-<div class="row">
-	<div class="medium-2 large-2 column text-right">
-		<h3>Projects</h3>
-		<% if current_user.present? %>
-			<h6><%= link_to image_tag("new.png") + "New Project", new_project_path %></h6>
-		<% end %>
-	</div>
-	<div class="medium-10 large-10 column">
-		<ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 text-center">
-			<% @projects.reverse_each do |project| %>
-				<li>
-					<a href="#" class="th" data-reveal-id="<%= project.id %>">
-    <h2><%= project.title %></h2>
-    <div class="img-monitor">
-      <img class="img-responsive img-monitor" src="assets/monitor.png">
-      <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
-      <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
-    </div>
-    <p><%= markdown project.description.to_s %></p>
-					</a>
-					<% if current_user.present? %>
-						<%= link_to image_tag("edit.png"), edit_project_path(project) %>
-						<%= link_to image_tag("delete.png"), project, method: :delete, data: { confirm: 'Are you sure?' } %>
-					<% end %>
-				</li>
-
-				<div id="<%= project.id %>" class="reveal-modal" data-reveal>
-					<div class="large-8 column right">
-						<%= image_tag project.image_url.to_s, :class => 'img-responsive' %>
-					</div>
-					<div class="large-4 column left">
-						<h2><%= link_to project.title, "http://#{project.url}" %></h2>
-						<h5>Description:</h5>
-						<p><%= markdown project.description.to_s %></p>
-						<h5>Technology:</h5>
-						<p><%= render 'tech', :techlist => project.technologies_used %></p>
-						<h5>Links:</h5>
-						<ul class="inline-list text-center">
-							<li><%= link_to image_tag("website.png"), "http://#{project.url}" %>Website</li>
-							<li><%= link_to image_tag("github.png"), "http://#{project.github}" %>Github</li>
-						</ul>
-					</div>
-				  <a class="close-reveal-modal">&#215;</a>
-				</div>
-			<% end %>
-		</ul>
-	</div>
+<div class="medium-8 large-10 columns sidebar">
+  <div class="text-right">
+    <% if current_user.present? %>
+      <h6><%= link_to image_tag("new.png") + "New Project", new_post_path %></h6>
+    <% end %>
+  </div>
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 text-center">
+    <% @projects.each do |project| %>
+      <li>
+        <div class="img-monitor">
+          <img class="img-responsive img-monitor" src="assets/monitor.png">
+          <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+          <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
+        </div>
+        <h3><%= project.title %></h3>
+      </li>
+    <% end %>
+  </ul>
+  <div class="pagination-centered">
+    <%= foundation_paginate @posts %>
+  </div>
 </div>

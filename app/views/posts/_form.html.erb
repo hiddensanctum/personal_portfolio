@@ -1,8 +1,9 @@
-<%= form_for(@post) do |f| %>
-	<%= f.text_field :title, placeholder: "title"%>
-	<%= f.text_area :body, placeholder: "title", :style => "height: 500px"%>
-	<%= f.label :tag_list, "Tags (separated by commas)" %><br />
-  <%= f.text_field :tag_list %>
-	<%= f.submit "Submit", :class => 'button success' %>
-<% end %>
-
+<div class="medium-8 large-4 columns pag">
+  <%= form_for(@post) do |f| %>
+  	<%= f.text_field :title, placeholder: "title"%>
+  	<%= f.text_area :body, placeholder: "title", :style => "height: 500px"%>
+  	<%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  	<%= f.submit "Submit", :class => 'button success' %>
+  <% end %>
+</div>

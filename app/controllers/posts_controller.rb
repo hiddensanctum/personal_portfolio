@@ -2,20 +2,23 @@ class PostsController < ApplicationController
 	before_filter :authenticate_user!, except: [:index, :show]
 
 	def index
+		@page_title = 'Blog'
+
 		if current_user.present?
 			@posts = policy_scope(Post).order('created_at DESC')
 			render 'admin'
 		else
 			if params[:tag]
-	    	@posts = policy_scope(Post).order('created_at DESC').tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 3)
+	    	@posts = policy_scope(Post).order('created_at DESC').tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 5)
 	  	else
-	    	@posts = policy_scope(Post).order('created_at DESC').paginate(:page => params[:page], :per_page => 3)
+	    	@posts = policy_scope(Post).order('created_at DESC').paginate(:page => params[:page], :per_page => 5)
 	  	end
 	  end
 	end
 
 	def show
 		@post = Post.find(params[:id])
+		@page_title = 'Blog'
 
 		if request.path != post_path(@post)
 	    redirect_to @post, status: :moved_permanently
