@@ -93,10 +93,12 @@ a:hover.button {
 .sidebar-top {
   padding: 10px;
 }
+a {
+  color:
+}
 @media only screen and (min-width: 40.063em) {
   .sidebar {
     height: 100%;
-    width: 100%;
     display:table;
   }
   .sidebar-row {
@@ -112,6 +114,7 @@ a:hover.button {
   }
   .columns {
     height: 100%;
+    overflow: auto;
   }
 }
 @media only screen and (min-width: 64.063em) {
