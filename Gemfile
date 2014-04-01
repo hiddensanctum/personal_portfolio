@@ -37,7 +37,6 @@ gem 'pygments.rb'
 gem 'redcarpet'
 gem 'friendly_id', '~> 5.0.0'
 gem 'truncate_html'
-gem 'foundation-rails'
 
 group :production do
   gem 'rails_12factor'
