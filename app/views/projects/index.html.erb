@@ -16,21 +16,25 @@
         <h3><%= project.title %></h3>
         </a>
         <div id="<%= project.id %>" class="hide">
-          <div class="img-monitor">
-            <img class="img-responsive img-monitor" src="assets/monitor.png">
-            <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
-            <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
+          <div class="large-6 columns">
+            <div class="img-monitor">
+              <img class="img-responsive img-monitor" src="assets/monitor.png">
+              <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+              <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
+            </div>
           </div>
-          <h3><%= project.title %></h3>
-          <h3><small>Description:</small></h3>
-          <p><%= project.description %></p>
-          <h3><small>Technology:</small></h3>
-          <p><%= render 'tech', :techlist => project.technologies_used %></p>
-          <h3><small>Links:</small></h3>
-          <ul class="inline-list text-center">
-            <li><%= link_to image_tag("website.png"), "http://#{project.url}" %>Website</li>
-            <li><%= link_to image_tag("github.png"), "http://#{project.github}" %>Github</li>
-          </ul>
+          <div class="large-6 columns">
+            <h3><%= project.title %></h3>
+            <h3><small>Description:</small></h3>
+            <p><%= project.description %></p>
+            <h3><small>Technology:</small></h3>
+            <p><%= render 'tech', :techlist => project.technologies_used %></p>
+            <h3><small>Links:</small></h3>
+            <ul class="inline-list text-center">
+              <li><%= link_to image_tag("website.png"), "http://#{project.url}" %>Website</li>
+              <li><%= link_to image_tag("github.png"), "http://#{project.github}" %>Github</li>
+            </ul>
+          </div>
         </div>
       </li>
     <% end %>

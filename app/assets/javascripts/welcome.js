@@ -5,7 +5,7 @@ $(document).ready(function() {
     }
   });
   $(".fancybox").fancybox({
-    maxWidth  : 600,
+    maxWidth  : 1200,
     helpers: {
       title: {
         type: "inside",
