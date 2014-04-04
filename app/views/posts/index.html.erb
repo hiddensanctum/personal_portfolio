@@ -15,7 +15,7 @@
           <%= link_to image_tag("delete.png"), post, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
         <h3><%= link_to post.title, post_path(post) %></h3>
-        <p><%= truncate_html(markdown(post.body), length: 600, omission: '...(continued)') %></p>
+        <p><%= truncate_html(markdown(post.body), length: 400, omission: '...(continued)') %></p>
         <p><%= link_to 'leave a comment', post %></p>
       </li>
     <% end %>
