@@ -1,4 +1,83 @@
-
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background: #1F2325;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+.trout {
+  background-color: #485156;
+}
+.blue {
+  background-color: #1BB4F0;
+  color: #000;
+}
+.lightblue {
+  background-color: #36C7FF;
+  color: #000;
+}
+.darkblue {
+  background-color: #0177A4;
+  color: #fff;
+}
+.img-monitor {
+  position: relative;
+}
+.img-website {
+  position: absolute;
+  top: 14%;
+  left: 18%;
+  width: 64%;
+  height: 52%;
+}
+.button {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #fff;
+}
+.nav {
+  list-style-type: none;
+  margin: 0px;
+}
+.nav.inline li {
+  padding: 10px;
+  float: left;
+}
+a:hover.button {
+  background: rgba(0,0,0,1.0);
+}
+.pag {
+  padding: 10px 10px 0 10px;
+}
+.pagination-centered {
+  padding-top: 10px;
+}
+a {
+  color: #85D6FF;
+}
+a:hover {
+  color: #52A3CC;
+}
+.grid-text {
+  padding: 10px;
+}
+.padding {
+  padding-top: 20px;
+}
+.highlight a {
+  color: #fff;
+  pointer-events: none;
+  cursor: default;
+}
+.fancybox-skin {
+  background-color: #1F2325;
+  color: #fff;
+}
+@media only screen and (min-width: 64.063em) {
   .highlight a {
     font-size: 1.5em;
   }
@@ -38,3 +117,4 @@
   .grid-5_5 {
     left: 68%;
   }
+}
