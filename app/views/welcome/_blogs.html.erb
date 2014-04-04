@@ -2,7 +2,7 @@
   <div class="grid-text bottom">
     <h3>Latest Blog Post</h3>
     <h5><%= l @post.created_at, format: :long %></h5>
-    <h4><%= @post.title %></h4>
+    <h4><%= link_to @post.title, post_path(@post) %></h4>
     <p><%= truncate_html(markdown(@post.body), length: 400, omission: '...(continued)') %></p>
     <div class="text-center">
       <%= link_to "More", posts_path, class: "button" %>

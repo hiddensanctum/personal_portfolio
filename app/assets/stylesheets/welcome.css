@@ -57,10 +57,10 @@ a:hover.button {
   padding-top: 10px;
 }
 a {
-  color: #85D6FF;
+  color: #36C7FF;
 }
 a:hover {
-  color: #52A3CC;
+  color: #F08D1A;
 }
 .grid-text {
   padding: 10px;
@@ -70,7 +70,7 @@ a:hover {
   padding-top: 20px;
 }
 .highlight a {
-  color: #fff;
+  color: #F08D1A;
   pointer-events: none;
   cursor: default;
 }
@@ -84,9 +84,16 @@ pre {
  white-space: -pre-wrap;      /* Opera 4-6 */
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
- background: #E1DFD8;
+ background: #fff;
  padding: 10px;
  color: #000;
+ border-radius: 2px;
+}
+label {
+  color: #E6E6E6;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: #F08D1A;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
   .grid-text {
