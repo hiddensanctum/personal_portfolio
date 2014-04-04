@@ -64,6 +64,7 @@ a:hover {
 }
 .grid-text {
   padding: 10px;
+  max-width: 100%;
 }
 .padding {
   padding-top: 20px;
@@ -76,6 +77,41 @@ a:hover {
 .fancybox-skin {
   background-color: #1F2325;
   color: #fff;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
+  .grid-text {
+    position: absolute;
+  }
+  .grid-text.bottom {
+    bottom: 0;
+  }
+  .grid {
+    position: absolute;
+    min-height: 100%;
+  }
+  .grid-1_5 {
+    width: 50%;
+    left: 0%;
+  }
+  .grid-2_5 {
+    width: 50%;
+    left: 50%;
+  }
+  .grid-3_5 {
+    width: 100%;
+    top: 100%;
+    left: 0%;
+  }
+  .grid-4_5 {
+    width: 50%;
+    top: 200%;
+    left: 0%;
+  }
+  .grid-5_5 {
+    width: 50%;
+    top: 200%;
+    left: 50%;
+  }
 }
 @media only screen and (min-width: 64.063em) {
   .highlight a {
@@ -90,9 +126,6 @@ a:hover {
   }
   .grid-text.bottom {
     bottom: 0;
-  }
-  .grid-text.top {
-    top: 0;
   }
   .grid {
     position: absolute;
