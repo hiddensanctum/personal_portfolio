@@ -113,7 +113,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   }
   .grid-5_5 {
     width: 100%;
-    padding: 0 10%;
+    padding: 0 12%;
   }
 }
 @media only screen and (min-width: 64.063em) {
