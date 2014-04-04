@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
     @page_title = 'Projects'
-    @projects = Project.all.order('created_at ASC').paginate(:page => params[:page], :per_page => 6)
+    @projects = Project.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 6)
   end
 
   def new
