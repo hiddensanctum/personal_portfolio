@@ -1,15 +1,11 @@
-<div class="medium-4 large-2 columns darkblue">
-  <div class="sidebar">
-    <div class="sidebar-row">
-      <div class="sidebar-bottom">
-        <h3>Latest Blog Post</h3>
-        <h5><%= l @post.created_at, format: :long %></h5>
-        <h4><%= @post.title %></h4>
-        <p><%= truncate_html(markdown(@post.body), length: 400, omission: '...(continued)') %></p>
-        <div class="text-center">
-          <%= link_to "More", posts_path, class: "button" %>
-        </div>
-      </div>
+<div class="grid grid-4_5 darkblue">
+  <div class="grid-text bottom">
+    <h3>Latest Blog Post</h3>
+    <h5><%= l @post.created_at, format: :long %></h5>
+    <h4><%= @post.title %></h4>
+    <p><%= truncate_html(markdown(@post.body), length: 400, omission: '...(continued)') %></p>
+    <div class="text-center">
+      <%= link_to "More", posts_path, class: "button" %>
     </div>
   </div>
 </div>

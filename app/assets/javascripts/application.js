@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.fancybox
+//= require jquery.fancybox.pack
 //= require foundation
 //= require turbolinks
 //= require_tree .

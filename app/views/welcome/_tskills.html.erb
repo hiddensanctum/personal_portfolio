@@ -1,34 +1,30 @@
-<div class="medium-4 large-2 columns blue">
-  <div class="sidebar">
-    <div class="sidebar-row">
-      <div class="sidebar-bottom">
-        <h3>Technical Skills</h3>
-        <ul class="small-block-grid-3 medium-block-grid-3 large-block-grid-3 text-center">
-          <% @tskills.each do |tskill| %>
-            <li>
-              <%= image_tag(tskill.skill_icon_url.to_s, class: "img-responsive") %>
-              <span><%= tskill.name %></span>
-              <% if tskill.exploring %>
-                <span>(exploring)</span>
-              <% end %>
-              <p>
-                <% if current_user.present? %>
-                  <%= link_to image_tag("edit.png"), edit_tskill_path(tskill) %>
-                  <%= link_to image_tag("delete.png"), tskill, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>
-              </p>
-            </li>
+<div class="grid grid-2_5 lightblue">
+  <div class="grid-text bottom">
+    <h3>Technical Skills</h3>
+    <ul class="small-block-grid-3 medium-block-grid-4 large-block-grid-3 text-center">
+      <% @tskills.each do |tskill| %>
+        <li>
+          <%= image_tag(tskill.skill_icon_url.to_s, class: "img-responsive") %>
+          <span><%= tskill.name %></span>
+          <% if tskill.exploring %>
+            <span>(exploring)</span>
           <% end %>
-          <li>
+          <p>
             <% if current_user.present? %>
-              <h6><%= link_to image_tag("new.png") + "New Technical Skills", new_tskill_path %></h6>
+              <%= link_to image_tag("edit.png"), edit_tskill_path(tskill) %>
+              <%= link_to image_tag("delete.png"), tskill, method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
-          </li>
-        </ul>
-        <div class="text-center">
-          <%= link_to "More", posts_path, class: "button" %>
-        </div>
-      </div>
+          </p>
+        </li>
+      <% end %>
+      <li>
+        <% if current_user.present? %>
+          <h6><%= link_to image_tag("new.png") + "New Technical Skills", new_tskill_path %></h6>
+        <% end %>
+      </li>
+    </ul>
+    <div class="text-center">
+      <%= link_to "More", posts_path, class: "button" %>
     </div>
   </div>
 </div>

@@ -1,0 +1,26 @@
+<div class="grid grid-1_5 trout">
+  <div class="grid-text bottom">
+    <ul class="nav"><h4>
+      <li>Home</li>
+      <li><%= link_to "Blog", posts_path %></li>
+      <li><%= link_to "Projects", projects_path %></li>
+      <li><a href="https://s3-us-west-2.amazonaws.com/jlc-portfolio/uploads/resume/James_Chuang_Resume.pdf">Resume</a></li>
+      <% if current_user.present? %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% end %></h4>
+    </ul>
+    <h1>James Chuang</h1>
+    <h6>Full Stack Developer</h6>
+    <div class="row">
+      <p>I am a Full Stack Developer currently living in Seatle with a background in Social/Cyber Psychology. I studied at <a href="http://www.codefellows.org">Code Fellows</a> in 2013 and have a Bachelors of Science in Psychology from the <a href="http://www.umd.edu/">University of Maryland</a>.</p>
+      <p>My mission is to bridge the gap between Psychology and Technology to create a more human orientated experience</p>
+      <div class="text-center">
+        <h4>Get in Touch:</h4>
+        <%= link_to image_tag("email.png"), "mailto:jameschuang13@gmail.com" %>
+        <%= link_to image_tag("github.png"), "https://github.com/hiddensanctum" %>
+        <%= link_to image_tag("linkedin.png"), "http://www.linkedin.com/pub/james-chuang/49/249/564" %>
+        <%= link_to image_tag("twitter.png"), "https://twitter.com/N3dd1h" %>
+      </div>
+    </div>
+  </div>
+</div>

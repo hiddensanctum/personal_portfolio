@@ -1,23 +1,32 @@
 $(document).ready(function() {
   $('.nav li a').each(function() {
     if($(this).text() == $('.nav').data('title')) {
-      $(this).contents().unwrap();
+      $(this).parent().addClass( "highlight" );
     }
   });
-  var maxHeight = -1;
-  if $(window).width() > 1000 {
-    $('.grid').each(function() {
-     if (maxHeight < $(this).height()){
-      maxHeight = $(this).height();
-     };
-     console.log($(this).height());
-     console.log(maxHeight);
-    });
+  $(".fancybox").fancybox({
+    maxWidth  : 600,
+    helpers: {
+      title: {
+        type: "inside",
+      }
+    },
+    afterLoad: function() {
+      this.content = this.content.html();
+    }
+  });
+  // var maxHeight = -1;
+  //   $('.grid').each(function() {
+  //    if (maxHeight < $(this).height()){
+  //     maxHeight = $(this).height();
+  //    };
+  //    console.log($(this).height());
+  //    console.log(maxHeight);
+  //   });
 
-    $('.grid').each(function() {
-     $(this).height(maxHeight);
-    });
-  };
+  //   $('.grid').each(function() {
+  //    $(this).height(maxHeight);
+  //   });
 
 
   // window.onresize = function(event) {

@@ -1,14 +1,9 @@
-<% @posts.each do |post| %>
-  <div class="medium-4 large-2 columns">
-    <div class="sidebar">
-      <div class="sidebar-row">
-        <div class="sidebar-top">
-          <h4><%= l post.created_at, format: :long %></h4>
-          <h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
-        </div>
-      </div>
-      <div class="sidebar-row">
-        <div class="sidebar-bottom">
+<div class="medium-12 large-10 columns">
+  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 padding">
+    <% @posts.each do |post| %>
+      <li>
+        <h4><%= l post.created_at, format: :long %></h4>
+        <h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
         <% if current_user.present? %>
           <% if post.published? == false && policy(post).publish?%>
             <%= link_to image_tag("publish.png"), post_path(post, post: { published: true }), method: :put, data: { confirm: 'Are you sure you want to publish?'}%>
@@ -20,15 +15,12 @@
           <%= link_to image_tag("delete.png"), post, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
         <h3><%= link_to post.title, post_path(post) %></h3>
-        <p><%= truncate_html(markdown(post.body), length: 400, omission: '...(continued)') %></p>
+        <p><%= truncate_html(markdown(post.body), length: 600, omission: '...(continued)') %></p>
         <p><%= link_to 'leave a comment', post %></p>
-          <% if post == @posts.last%>
-            <div class="pagination-centered">
-              <%= foundation_paginate @posts %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="pagination-centered">
+  <%= foundation_paginate @posts %>
+</div>

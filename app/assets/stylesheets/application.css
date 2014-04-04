@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require foundation_and_overrides
+ *= require jquery.fancybox
  *= require_tree .
  */

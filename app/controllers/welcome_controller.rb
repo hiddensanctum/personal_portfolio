@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
     @project = Project.last
     @post = Post.last
     @page_title = 'Home'
+    @hide_nav = true
 	end
 end
