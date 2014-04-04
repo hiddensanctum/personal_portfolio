@@ -20,7 +20,7 @@
           <%= link_to image_tag("delete.png"), project, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
         <div id="<%= project.id %>" class="hide">
-          <div class="medium-centered medium-10 large-6 columns">
+          <div class="medium-10 large-6 medium-centered large-uncentered columns">
             <div class="img-monitor">
               <img class="img-responsive img-monitor" src="assets/monitor.png">
               <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
