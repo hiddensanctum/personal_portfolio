@@ -93,29 +93,36 @@ a:hover.button {
 .sidebar-top {
   padding: 10px;
 }
-a {
-  color:
-}
+
+
+
 @media only screen and (min-width: 40.063em) {
-  .sidebar {
-    height: 100%;
-    display:table;
-  }
-  .sidebar-row {
-    display: table-row;
-  }
-  .sidebar-bottom {
-    display:table-cell;
-    vertical-align:bottom;
-  }
-  .sidebar-top {
-    display:table-cell;
-    vertical-align: top;
-  }
-  .columns {
-    height: 100%;
-    overflow: auto;
-  }
 }
 @media only screen and (min-width: 64.063em) {
+  .container {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+  .grid {
+    position: absolute;
+    width: 20%;
+    min-height: 100%;
+    padding: 10px;
+  }
+  .grid-1_5 {
+    left: 0%;
+  }
+  .grid-2_5 {
+    left: 20%;
+  }
+  .grid-3_5 {
+    left: 40%;
+  }
+  .grid-4_5 {
+    left: 60%;
+  }
+  .grid-5_5 {
+    left: 80%;
+  }
 }
