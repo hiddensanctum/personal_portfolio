@@ -15,8 +15,9 @@ $(document).ready(function() {
       this.content = this.content.html();
     }
   });
-  // var maxHeight = -1;
-  //   $('.grid').each(function() {
+  // if($(window).width() >= 641 && $(window).width() < 1024) {
+  //   var maxHeight = -1;
+  //   $('.grid-text.bottom').each(function() {
   //    if (maxHeight < $(this).height()){
   //     maxHeight = $(this).height();
   //    };
@@ -27,7 +28,7 @@ $(document).ready(function() {
   //   $('.grid').each(function() {
   //    $(this).height(maxHeight);
   //   });
-
+  // }
 
   // window.onresize = function(event) {
   //   $('.sidebar').each(function() {
