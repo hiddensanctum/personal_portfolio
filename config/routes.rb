@@ -6,6 +6,7 @@ NewPortfolio::Application.routes.draw do
   devise_for :users
   resources :posts
   get 'tags/:tag', to: 'posts#index', as: :tag
+  get 'skills', :to => 'tskills#index'
 
   root :to => "welcome#index"
 

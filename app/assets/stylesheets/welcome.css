@@ -1,156 +1,122 @@
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  background: #1F2325;
-  color: #fff;
+  background: #EDEDED;
+  color: #35383F;
   padding: 0;
   margin: 0;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
-  color: #fff;
-}
-.trout {
-  background-color: #485156;
-}
-.blue {
-  background-color: #1BB4F0;
-  color: #000;
-}
-.lightblue {
-  background-color: #36C7FF;
-  color: #000;
-}
-.darkblue {
-  background-color: #0177A4;
-  color: #fff;
-}
-.img-monitor {
-  position: relative;
-}
-.img-website {
-  position: absolute;
-  top: 14%;
-  left: 18%;
-  width: 64%;
-  height: 52%;
-}
-.button {
-  background: rgba(0,0,0,0.5);
-  border: 1px solid #fff;
-}
-.nav {
-  list-style-type: none;
-  margin: 0px;
-}
-.nav.inline li {
-  padding: 10px;
-  float: left;
-}
-a:hover.button {
-  background: rgba(0,0,0,1.0);
-}
-.pag {
-  padding: 10px;
-}
-.pagination-centered {
-  padding-top: 10px;
+  color: #EEEFF7;
 }
 a {
-  color: #36C7FF;
+  font-family: 'Lato', sans-serif;
+  color: #F8284C;
 }
 a:hover {
-  color: #F08D1A;
+  color: #8B364D;
 }
-.grid-text {
-  padding: 10px;
-  max-width: 100%;
+.box {
+  background-color: #8B364D;
+  width: 20%;
+  float: left;
 }
-.padding {
-  padding-top: 20px;
+a:hover.image-box {
+  background: rgba(53,56,63,0.7);
+  opacity: 0.5;
 }
-.highlight a {
-  color: #F08D1A;
-  pointer-events: none;
-  cursor: default;
+.nav {
+  list-style: none;
+  margin: 0;
+}
+.page-content h1, h2, h3, h4, h5, h6 {
+  color: #35383F;
 }
 .fancybox-skin {
-  background-color: #1F2325;
-  color: #fff;
+  background-color: #35383F;
+  color: #EDEDED;
+}
+.fancybox-skin h3 {
+  color: #F8284C;
+}
+.blog-post {
+  min-width: 600px;
+}
+.project-box {
+  background-color: #8B364D;
+  /*width: 100%;*/
+  /*height: 300px;*/
+  /*width: 20%;*/
+  float: left;
+}
+.post-box {
+  background-color: #4ADCD5;
+  /*width: 100%;*/
+  /*height: 300px;*/
+  /*width: 20%;*/
+  float: left;
+}
+#wrapper {
+  padding-left: 320px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  color: #EDEDED;
+  margin-left: -320px;
+  left: 320px;
+  width: 320px;
+  background: #35383F;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+#sidebar-content {
+  padding: 20px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+#topbar-wrapper {
+  color: #E4EDFA;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #5B6470;
+  padding: 10px 20px;
 }
 pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
- background: #fff;
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ background: #E3E3E3;
  padding: 10px;
- color: #000;
- border-radius: 2px;
+ color: #35383F;
+ border-radius: 3px;
 }
-label {
-  color: #E6E6E6;
-}
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: #F08D1A;
-}
-@media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
-  .grid {
-    padding: 20px;
+@media (max-width:767px) {
+  #wrapper {
+    padding-left: 0;
   }
-  .grid-1_5 {
-    width: 100%;
+
+  #sidebar-wrapper {
+    left: 0;
   }
-  .grid-2_5 {
-    width: 100%;
+
+  #wrapper.active {
+    position: relative;
+    left: 320px;
   }
-  .grid-3_5 {
-    width: 100%;
-  }
-  .grid-4_5 {
-    width: 100%;
-  }
-  .grid-5_5 {
-    width: 100%;
-    padding: 0 12%;
-  }
-}
-@media only screen and (min-width: 64.063em) {
-  .highlight a {
-    font-size: 1.5em;
-  }
-  .nav.inline li {
-    padding: 0;
-    float: none;
-  }
-  .grid-text {
-    position: absolute;
-  }
-  .grid-text.bottom {
-    bottom: 0;
-  }
-  .grid {
-    position: absolute;
-    width: 17%;
-    min-height: 100%;
-  }
-  .grid.last {
-    width: 32%;
-  }
-  .grid-1_5 {
-    left: 0%;
-  }
-  .grid-2_5 {
-    left: 17%;
-  }
-  .grid-3_5 {
-    left: 34%;
-  }
-  .grid-4_5 {
-    left: 51%;
-  }
-  .grid-5_5 {
-    left: 68%;
+
+  #wrapper.active #sidebar-wrapper {
+    left: 320px;
+    width: 320px;
+    transition: all 0.4s ease 0s;
   }
 }

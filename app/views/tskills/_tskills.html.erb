@@ -1,0 +1,28 @@
+<div class="large-12 column">
+  <h3>Technical Skills</h3>
+</div>
+<div class="large-12 column">
+  <ul class="small-block-grid-3 medium-block-grid-6 large-block-grid-6 text-center">
+    <% @tskills.each do |tskill| %>
+      <li>
+        <%= image_tag(tskill.skill_icon_url.to_s, class: "img-responsive") %>
+        <span><%= tskill.name %></span>
+        <% if tskill.exploring %>
+          <span>(exploring)</span>
+        <% end %>
+        <p>
+          <% if current_user.present? %>
+            <%= link_to image_tag("edit.png"), edit_tskill_path(tskill) %>
+            <%= link_to image_tag("delete.png"), tskill, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </p>
+      </li>
+    <% end %>
+    <li>
+      <% if current_user.present? %>
+        <h6><%= link_to image_tag("new.png") + "New Technical Skills", new_tskill_path %></h6>
+      <% end %>
+    </li>
+  </ul>
+</div>
+

@@ -1,15 +1,11 @@
-<div class="grid grid-5_5 last">
-  <div class="grid-text bottom">
-    <h3>Latest Project</h3>
-    <h4><%= @project.title %></h4>
-    <div class="img-monitor">
-      <img class="img-responsive img-monitor" src="assets/monitor.png">
-      <%= image_tag(@project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
-      <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
-    </div>
-    <p><%=truncate_html(markdown(@project.description.to_s), length: 400, omission: '...(continued)') %></p>
-    <div class="text-center">
-      <%= link_to "More", projects_path, class: "button" %>
-    </div>
+<div class="large-12 column">
+  <h3>Latest Project</h3>
+</div>
+<div class="large-12 column">
+  <h4><%= @project.title %></h4>
+  <%= image_tag(@project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+  <p><%=truncate_html(markdown(@project.description.to_s), length: 400, omission: '...(continued)') %></p>
+  <div class="text-center">
+    <%= link_to "More", projects_path, class: "button" %>
   </div>
 </div>

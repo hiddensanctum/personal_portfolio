@@ -1,6 +1,10 @@
 class TskillsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
+  def index
+    @tskills = Tskill.all.order('created_at ASC')
+  end
+
   def new
     @tskill =Tskill.new
   end

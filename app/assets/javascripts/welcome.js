@@ -1,42 +1,35 @@
 $(document).ready(function() {
-  $('.nav li a').each(function() {
-    if($(this).text() == $('.nav').data('title')) {
-      $(this).parent().addClass( "highlight" );
-    }
-  });
-  $(".fancybox").fancybox({
-    maxWidth  : 1200,
-    helpers: {
-      title: {
-        type: "inside",
+
+  var CalcSize = function() {
+    var number = 15;
+    var width = $('#page-content-wrapper').width();
+    var height = $(window).height();
+    var area = height * width;
+    var elementArea = parseInt(area / number);
+
+    // Calculate side length if there is no "spill":
+    var sideLength = parseInt(Math.sqrt(elementArea));
+
+    // We now need to fit the squares. Let's reduce the square size
+    // so an integer number fits the width.
+    var numX = Math.ceil(width/sideLength);
+    sideLength = width/numX;
+    while (numX <= number) {
+      // With a bit of luck, we are done.
+      if (Math.floor(height/sideLength) * numX >= number) {
+        // They all fit! We are done!
+        return sideLength;
       }
-    },
-    afterLoad: function() {
-      this.content = this.content.html();
+      // They don't fit. Make room for one more square i each row.
+      numX++;
+      sideLength = width/numX;
     }
-  });
-  // if($(window).width() >= 641 && $(window).width() < 1024) {
-  //   var maxHeight = -1;
-  //   $('.grid-text.bottom').each(function() {
-  //    if (maxHeight < $(this).height()){
-  //     maxHeight = $(this).height();
-  //    };
-  //    console.log($(this).height());
-  //    console.log(maxHeight);
-  //   });
+    // Still doesn't fit? The window must be very wide
+    // and low.
+    sideLength = height;
+    return sideLength;
+  }
 
-  //   $('.grid').each(function() {
-  //    $(this).height(maxHeight);
-  //   });
-  // }
-
-  // window.onresize = function(event) {
-  //   $('.sidebar').each(function() {
-  //    maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
-  //   });
-
-  //   $('.sidebar').each(function() {
-  //    $(this).height(maxHeight);
-  //   });
-  // };
+  var height = $(window).height();
+  $('.box').height(height);
 });

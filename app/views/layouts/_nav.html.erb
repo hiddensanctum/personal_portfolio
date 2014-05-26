@@ -1,12 +1,10 @@
-<div class="medium-12 large-2 columns large-text-right">
-  <h1>James Chuang</h1>
-  <ul class="nav inline" data-title=<%= @page_title %>><h4>
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Blog", posts_path %></li>
-    <li><%= link_to "Projects", projects_path %></li>
-    <li><a href="https://s3-us-west-2.amazonaws.com/jlc-portfolio/uploads/resume/James_Chuang_Resume.pdf">Resume</a></li>
-    <% if current_user.present? %>
-      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-    <% end %></h4>
-  </ul>
-</div>
+<ul class="nav" data-title=<%= @page_title %>><h4>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Blog", posts_path %></li>
+  <li><%= link_to "Skills/Interests", skills_path %></li>
+  <li><%= link_to "Projects", projects_path %></li>
+  <li><a href="https://s3-us-west-2.amazonaws.com/jlc-portfolio/uploads/resume/James_Chuang_Resume.pdf">Resume</a></li>
+  <% if current_user.present? %>
+    <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+  <% end %></h4>
+</ul>

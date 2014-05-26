@@ -1,7 +1,5 @@
-<div class="medium-12 large-10 columns">
-  <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4 padding">
+<div class="medium-12 large-5 columns blog-post">
     <% @posts.each do |post| %>
-      <li>
         <h4><%= l post.created_at, format: :long %></h4>
         <h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>
         <% if current_user.present? %>
@@ -17,9 +15,7 @@
         <h3><%= link_to post.title, post_path(post) %></h3>
         <p><%= truncate_html(markdown(post.body), length: 400, omission: '...(continued)') %></p>
         <p><%= link_to 'leave a comment', post %></p>
-      </li>
     <% end %>
-  </ul>
   <div class="pagination-centered">
     <%= foundation_paginate @posts %>
   </div>

@@ -1,4 +1,4 @@
-<div class="medium-12 large-10 columns">
+<div class="medium-12 large-12 columns">
   <div class="text-right">
     <% if current_user.present? %>
       <h6><%= link_to image_tag("new.png") + "New Project", new_post_path %></h6>
@@ -8,11 +8,7 @@
     <% @projects.each do |project| %>
       <li>
         <a class="fancybox" rel="group" href='<%= "#" + project.id.to_s %>'>
-        <div class="img-monitor">
-          <img class="img-responsive img-monitor" src="assets/monitor.png">
           <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
-          <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
-        </div>
         <h3><%= project.title %></h3>
         </a>
         <% if current_user.present? %>
@@ -21,11 +17,7 @@
         <% end %>
         <div id="<%= project.id %>" class="hide">
           <div class="medium-10 large-6 medium-centered large-uncentered columns">
-            <div class="img-monitor">
-              <img class="img-responsive img-monitor" src="assets/monitor.png">
-              <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
-              <!-- <img class="img-responsive img-website" src="assets/cover.jpg"> -->
-            </div>
+            <%= image_tag(project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
           </div>
           <div class="large-6 columns">
             <h3><%= project.title %></h3>
