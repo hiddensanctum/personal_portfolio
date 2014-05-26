@@ -2,7 +2,7 @@ class TskillsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @tskills = Tskill.all.order('created_at ASC')
+    @tskills = Tskill.all
   end
 
   def new
