@@ -45,11 +45,14 @@ a:hover.image-box {
 .project-image {
   margin: auto;
 }
-ul.pagination li.current a {
+.pagination li.current a {
   background-color: #8B364D;
 }
 button, .button {
   background-color: #8B364D;
+}
+#latest-project {
+  padding: 0 10%;
 }
 #homepage-title {
   text-align: center;
@@ -63,7 +66,6 @@ button, .button {
   padding-left: 320px;
   /*transition: all 0.4s ease 0s;*/
 }
-
 #sidebar-wrapper {
   color: #EDEDED;
   margin-left: -320px;
@@ -125,6 +127,11 @@ pre {
     left: 320px;
     width: 320px;
     /*transition: all 0.4s ease 0s;*/
+  }
+  #homepage-title {
+    text-align: center;
+    font-size: 2em;
+    padding: 0 10px;
   }
 }
 @media only screen and (max-width: 40em) {
