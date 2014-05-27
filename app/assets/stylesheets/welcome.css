@@ -48,6 +48,9 @@ a:hover.image-box {
 .pagination li.current a {
   background-color: #8B364D;
 }
+.center {
+  text-align: center;
+}
 button, .button {
   background-color: #8B364D;
 }
