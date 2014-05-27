@@ -3,7 +3,7 @@ var ready = function() {
   $("#topbar-content").click(function() {
     if (clicked) {
       $(this).animate({
-        'padding-left': '0px'
+        'margin-left': '0px'
       }, { duration: 100 });
       $("#sidebar-wrapper").animate({
         'margin-left': '-320px'
@@ -17,7 +17,7 @@ var ready = function() {
       clicked = false;
     } else {
       $(this).animate({
-       'padding-left': '140px'
+       'margin-left': '140px'
      }, { duration: 100 });
       $("#sidebar-wrapper").animate({
        'margin-left': '-180px'
