@@ -15,7 +15,6 @@
 //= require jquery.fancybox
 //= require jquery.fancybox.pack
 //= require foundation
-//= require turbolinks
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
