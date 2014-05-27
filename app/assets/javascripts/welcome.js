@@ -8,6 +8,12 @@ var ready = function() {
       $("#sidebar-wrapper").animate({
         'margin-left': '-320px'
       }, { duration: 100 });
+      $("#page-content-wrapper").animate({
+        'left': '0'
+      }, {
+        duration: 100,
+        complete: function() { $("#page-content-wrapper").css('position', 'initial'); }
+      });
       clicked = false;
     } else {
       $(this).animate({
@@ -16,6 +22,10 @@ var ready = function() {
       $("#sidebar-wrapper").animate({
        'margin-left': '-180px'
      }, { duration: 100 });
+      $("#page-content-wrapper").css('position', 'absolute');
+      $("#page-content-wrapper").animate({
+        'left': '140px'
+      }, { duration: 100 });
       clicked = true;
     }
   });
