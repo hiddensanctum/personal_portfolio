@@ -42,23 +42,12 @@ a:hover.image-box {
 .fancybox-skin h3 {
   color: #F8284C;
 }
-.project-box {
-  background-color: #8B364D;
-  /*width: 100%;*/
-  /*height: 300px;*/
-  /*width: 20%;*/
-  float: left;
-}
-.post-box {
-  background-color: #4ADCD5;
-  /*width: 100%;*/
-  /*height: 300px;*/
-  /*width: 20%;*/
-  float: left;
+.project-image {
+  margin: auto;
 }
 #wrapper {
   padding-left: 320px;
-  transition: all 0.4s ease 0s;
+  /*transition: all 0.4s ease 0s;*/
 }
 
 #sidebar-wrapper {
@@ -71,7 +60,7 @@ a:hover.image-box {
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
-  transition: all 0.4s ease 0s;
+  /*transition: all 0.4s ease 0s;*/
 }
 #sidebar-content {
   padding: 10px;
@@ -81,12 +70,15 @@ a:hover.image-box {
   width: 100%;
 }
 #topbar-wrapper {
+  top: 10px;
   color: #E4EDFA;
   position: fixed;
-  width: 100%;
+  width: auto;
   z-index: 1000;
   background-color: #5B6470;
-  padding: 10px 20px;
+  padding: 10px 10px 15px 10px;
+  opacity: 0.9;
+  display: none;
 }
 pre {
  white-space: pre-wrap; /* css-3 */
@@ -118,14 +110,29 @@ pre {
   #wrapper.active #sidebar-wrapper {
     left: 320px;
     width: 320px;
-    transition: all 0.4s ease 0s;
+    /*transition: all 0.4s ease 0s;*/
   }
 }
 @media only screen and (max-width: 40em) {
+  #intro {
+    display: none;
+  }
+  #title {
+    display: none;
+  }
+  .nav {
+    /*text-align: right;*/
+    float: right;
+  }
   #sidebar-wrapper {
-    margin: 0;
-    position: relative;
-    width: 100%;
+    /*margin-left: -100px;*/
+    /*transition: all 0.4s ease 0s;*/
+  }
+  #topbar-wrapper {
+    display: block;
+  }
+  #page-content-wrapper {
+    padding-top: 60px;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */

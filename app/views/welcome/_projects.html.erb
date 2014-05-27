@@ -3,7 +3,7 @@
 </div>
 <div class="large-12 column">
   <h4><%= @project.title %></h4>
-  <%= image_tag(@project.image_url(:thumb).to_s, class:"img-responsive img-website") %>
+  <%= image_tag(@project.image_url.to_s, class:"img-responsive img-website") %>
   <p><%=truncate_html(markdown(@project.description.to_s), length: 400, omission: '...(continued)') %></p>
   <div class="text-center">
     <%= link_to "More", projects_path, class: "button" %>

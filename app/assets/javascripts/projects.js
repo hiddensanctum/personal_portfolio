@@ -4,17 +4,19 @@ $(document).ready(function() {
       $(this).parent().addClass( "highlight" );
     }
   });
-  $(".fancybox").fancybox({
-    maxWidth  : 1200,
-    helpers: {
-      title: {
-        type: "inside",
+  if($(".fancybox") != []) {
+    $(".fancybox").fancybox({
+      maxWidth  : 1200,
+      helpers: {
+        title: {
+          type: "inside",
+        }
+      },
+      afterLoad: function() {
+        this.content = this.content.html();
       }
-    },
-    afterLoad: function() {
-      this.content = this.content.html();
-    }
-  });
+    });
+  }
   // if($(window).width() >= 641 && $(window).width() < 1024) {
   //   var maxHeight = -1;
   //   $('.grid-text.bottom').each(function() {
