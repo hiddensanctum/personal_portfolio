@@ -32,10 +32,7 @@ var ready = function() {
 
   $('#homepage-title').typed({
     strings: ["Hello! I am a Full Stack Developer"],
-    typeSpeed: 0,
-    backDelay: 500, // pause before backspacing
-    loop: false, // loop on or off (true or false)
-    loopCount: false, // number of loops, false = infinite
+    typeSpeed: 30,
   });
 
   $(".fancybox").fancybox({

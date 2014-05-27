@@ -51,6 +51,14 @@ ul.pagination li.current a {
 button, .button {
   background-color: #8B364D;
 }
+#homepage-title {
+  text-align: center;
+  font-size: 4em;
+  padding: 0 30px;
+}
+#typed-cursor {
+  display: none;
+}
 #wrapper {
   padding-left: 320px;
   /*transition: all 0.4s ease 0s;*/
