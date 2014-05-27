@@ -45,6 +45,12 @@ a:hover.image-box {
 .project-image {
   margin: auto;
 }
+ul.pagination li.current a {
+  background-color: #8B364D;
+}
+button, .button {
+  background-color: #8B364D;
+}
 #wrapper {
   padding-left: 320px;
   /*transition: all 0.4s ease 0s;*/
