@@ -29,6 +29,18 @@ var ready = function() {
       clicked = true;
     }
   });
+
+  $(".fancybox").fancybox({
+    maxWidth  : 1200,
+    helpers: {
+      title: {
+        type: "inside",
+      }
+    },
+    afterLoad: function() {
+      this.content = this.content.html();
+    }
+  });
 };
 
 $(document).ready(ready);
