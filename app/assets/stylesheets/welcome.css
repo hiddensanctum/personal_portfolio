@@ -138,6 +138,10 @@ pre {
   }
 }
 @media only screen and (max-width: 40em) {
+
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (min-width: 40.063em) {
   #intro {
     display: none;
   }
@@ -159,8 +163,6 @@ pre {
     padding-top: 60px;
   }
 }
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (min-width: 40.063em) { }
 /* min-width 641px, medium screens */
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { }
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
