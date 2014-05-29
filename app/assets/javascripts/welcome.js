@@ -1,34 +1,50 @@
-var ready = function() {
+var button_click_menu = function() {
   var clicked = false;
   $("#topbar-content").click(function() {
-    if (clicked) {
-      $(this).stop().animate({
-        'margin-left': '0px'
-      }, { duration: 100 });
-      $("#sidebar-wrapper").stop().animate({
-        'margin-left': '-160px'
-      }, { duration: 100 });
-      $("#page-content-wrapper").stop().animate({
-        'left': '0'
-      }, {
-        duration: 100,
-        complete: function() { $("#page-content-wrapper").css('position', 'initial'); }
-      });
-      clicked = false;
-    } else {
-      $(this).stop().animate({
-       'margin-left': '80px'
-     }, { duration: 100 });
-      $("#sidebar-wrapper").stop().animate({
-       'margin-left': '-80px'
-     }, { duration: 100 });
-      $("#page-content-wrapper").css('position', 'absolute');
-      $("#page-content-wrapper").stop().animate({
-        'left': '80px'
-      }, { duration: 100 });
-      clicked = true;
-    }
+    clicked = menu_move(clicked);
   });
+}
+
+var mobile_swipe_menu = function() {
+  var swiped = false;
+  $(window).on("swipe", function(event) {
+    swiped = menu_move(swiped);
+  });
+
+}
+
+var menu_move = function(status) {
+  if (status) {
+    $('#topbar-content').stop().animate({
+      'margin-left': '0px'
+    }, { duration: 100 });
+    $("#sidebar-wrapper").stop().animate({
+      'margin-left': '-160px'
+    }, { duration: 100 });
+    $("#page-content-wrapper").stop().animate({
+      'left': '0'
+    }, {
+      duration: 100,
+      complete: function() { $("#page-content-wrapper").css('position', 'initial'); }
+    });
+    return false;
+  } else {
+    $('#topbar-content').stop().animate({
+     'margin-left': '80px'
+   }, { duration: 100 });
+    $("#sidebar-wrapper").stop().animate({
+     'margin-left': '-80px'
+   }, { duration: 100 });
+    $("#page-content-wrapper").css('position', 'absolute');
+    $("#page-content-wrapper").stop().animate({
+      'left': '80px'
+    }, { duration: 100 });
+    return true;
+  }
+}
+
+var ready = function() {
+  button_click_menu();
 
   $('#homepage-title').typed({
     strings: ["Hello! I am a Full Stack Developer"],

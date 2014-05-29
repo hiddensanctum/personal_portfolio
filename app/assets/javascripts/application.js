@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.fancybox
 //= require jquery.fancybox.pack
+//= require jquery.mobile-1.4.2.min
 //= require typed
 //= require foundation
 //= require_tree .
