@@ -2,13 +2,13 @@ var ready = function() {
   var clicked = false;
   $("#topbar-content").click(function() {
     if (clicked) {
-      $(this).animate({
+      $(this).stop().animate({
         'margin-left': '0px'
       }, { duration: 100 });
-      $("#sidebar-wrapper").animate({
-        'margin-left': '-320px'
+      $("#sidebar-wrapper").stop().animate({
+        'margin-left': '-160px'
       }, { duration: 100 });
-      $("#page-content-wrapper").animate({
+      $("#page-content-wrapper").stop().animate({
         'left': '0'
       }, {
         duration: 100,
@@ -16,15 +16,15 @@ var ready = function() {
       });
       clicked = false;
     } else {
-      $(this).animate({
-       'margin-left': '140px'
+      $(this).stop().animate({
+       'margin-left': '80px'
      }, { duration: 100 });
-      $("#sidebar-wrapper").animate({
-       'margin-left': '-180px'
+      $("#sidebar-wrapper").stop().animate({
+       'margin-left': '-80px'
      }, { duration: 100 });
       $("#page-content-wrapper").css('position', 'absolute');
-      $("#page-content-wrapper").animate({
-        'left': '140px'
+      $("#page-content-wrapper").stop().animate({
+        'left': '80px'
       }, { duration: 100 });
       clicked = true;
     }
