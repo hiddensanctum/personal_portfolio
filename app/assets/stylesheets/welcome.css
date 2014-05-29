@@ -14,8 +14,6 @@ a {
   font-family: 'Lato', sans-serif;
   color: #F8284C;
 }
-
-
 a:hover {
   color: #8B364D;
 }
@@ -28,24 +26,20 @@ a:hover.image-box {
   background: rgba(53,56,63,0.7);
   opacity: 0.5;
 }
-
 .icons {
   color: #fff;
 }
-
 .nav {
   padding: 10px;
   list-style: none;
   margin: 0;
-  font-size: 2em;
+  font-size: 1.5em;
 }
-
 .nav li p {
   font-size: 0.8em;
   margin: 0 10px;
   display: inline-block;
 }
-
 .page-content h1, .page-content h2,
 .page-content h3, .page-content h4,
 .page-content h5, .page-content h6 {
@@ -73,7 +67,6 @@ button, .button {
 button:hover, button:focus, .button:hover, .button:focus {
   background-color: #F8284C;
 }
-
 #latest-project {
   padding: 0 10%;
 }
@@ -104,7 +97,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 #sidebar-content {
   padding: 10px;
 }
-
 #page-content-wrapper {
   width: 100%;
 }
@@ -130,7 +122,6 @@ pre {
  color: #35383F;
  border-radius: 3px;
 }
-
 @media only screen and (max-width: 40em) {
   #intro {
     display: none;
