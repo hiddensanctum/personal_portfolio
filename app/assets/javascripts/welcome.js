@@ -45,6 +45,7 @@ var menu_move = function(status) {
 
 var ready = function() {
   button_click_menu();
+  mobile_swipe_menu();
 
   $('#homepage-title').typed({
     strings: ["Hello! I am a Full Stack Developer"],
