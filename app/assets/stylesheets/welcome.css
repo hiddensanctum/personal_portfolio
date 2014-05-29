@@ -58,7 +58,7 @@ table.nav td, table.nav tr {
   margin: auto;
 }
 .pagination li.current a {
-  background-color: #8B364D;
+  background-color: #8B364D !important;
 }
 .center {
   text-align: center;
@@ -66,6 +66,10 @@ table.nav td, table.nav tr {
 button, .button {
   background-color: #8B364D;
 }
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #F8284C;
+}
+
 #latest-project {
   padding: 0 10%;
 }
