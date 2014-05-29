@@ -52,7 +52,7 @@ var menu_move = function(status) {
 }
 
 var ready = function() {
-  if ($(window).width() <= 640) {
+  if ($('#topbar-wrapper').css('display') != 'none') {
     button_click_menu();
     mobile_swipe_menu();
   }

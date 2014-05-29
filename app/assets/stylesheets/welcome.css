@@ -33,15 +33,19 @@ a:hover.image-box {
   color: #fff;
 }
 
-table.nav {
-  background: none;
-  border: none;
+.nav {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  font-size: 2em;
 }
-table.nav td, table.nav tr {
-  background: none;
-  font-size: 1.2em;
-  padding: 5px 2px;
+
+.nav li p {
+  font-size: 0.8em;
+  margin: 0 10px;
+  display: inline-block;
 }
+
 .page-content h1, .page-content h2,
 .page-content h3, .page-content h4,
 .page-content h5, .page-content h6 {
@@ -137,25 +141,15 @@ pre {
   #menu {
     font-size: 1.6em;
   }
-  table.nav {
-    width: 80px;
+  .nav {
     text-align: center;
-  }
-  table.nav td {
-    width: 60px;
-    display: block;
-    padding: 0;
-  }
-  table.nav td:nth-child(even) {
-    padding-bottom: 10px;
-  }
-  .nav-link a {
-    font-size: 0.5em;
+    margin: 0;
   }
 
-  .nav {
-    padding: 0 2px 0px 2px;
-    font-size: 1.6em;
+  .nav li p {
+    margin: 0;
+    font-size: 0.5em;
+    display: block;
   }
 
   #sidebar-wrapper {
