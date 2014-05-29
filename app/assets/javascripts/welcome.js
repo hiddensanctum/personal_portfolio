@@ -7,16 +7,15 @@ var button_click_menu = function() {
 
 var mobile_swipe_menu = function() {
   var swiped = false;
-  $(window).on("swipe", function(event) {
+  Hammer(window).on("swipe", function(event) {
     swiped = menu_move(swiped);
   });
-
 }
 
 var menu_move = function(status) {
   if (status) {
-    $('#topbar-content').stop().animate({
-      'margin-left': '-10px'
+    $('#topbar-content').animate({
+      'margin-left': '0px'
     }, { duration: 100 });
     $("#sidebar-wrapper").animate({
       'margin-left': '-160px'
@@ -29,15 +28,15 @@ var menu_move = function(status) {
     });
     return false;
   } else {
-    $('#topbar-content').stop().animate({
-     'margin-left': '70px'
+    $('#topbar-content').animate({
+     'margin-left': '80px'
    }, { duration: 100 });
     $("#sidebar-wrapper").animate({
      'margin-left': '-80px'
    }, { duration: 100 });
     $("#page-content-wrapper").css('position', 'absolute');
     $("#page-content-wrapper").animate({
-      'left': '70px'
+      'left': '80px'
     }, { duration: 100 });
     return true;
   }
@@ -68,3 +67,5 @@ var ready = function() {
 $(document).ready(ready);
 
 $(document).on('page:load', ready);
+
+
