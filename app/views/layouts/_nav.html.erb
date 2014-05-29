@@ -3,7 +3,7 @@
   <tr><td><a href="<%= posts_path %>"><i class="fi-book icons"></i></a></td><td class="nav-link"> <%= link_to "Blog", posts_path %></td></tr>
   <tr><td><a href="<%= skills_path %>"><i class="fi-html5 icons"></i></a></td><td class="nav-link"> <%= link_to "Skills", skills_path %></td></tr>
   <tr><td><a href="<%= projects_path %>"><i class="fi-tablet-portrait icons"></i></a></td><td class="nav-link"> <%= link_to "Projects", projects_path %></td></tr>
-  <tr><td><a href="https://s3-us-west-2.amazonaws.com/jlc-portfotro/uploads/resume/James_Chuang_Resume.pdf"><i class="fi-page-csv icons"></i></a></td><td class="nav-link"> <a href="https://s3-us-west-2.amazonaws.com/jlc-portfotro/uploads/resume/James_Chuang_Resume.pdf">Resume</a></td></tr>
+  <tr><td><a href="https://dl.dropboxusercontent.com/u/89198540/James_Chuang_Resume.pdf"><i class="fi-page-csv icons"></i></a></td><td class="nav-link"> <a href="https://dl.dropboxusercontent.com/u/89198540/James_Chuang_Resume.pdf">Resume</a></td></tr>
   <% if current_user.present? %>
     <tr><td><a href="<%= destroy_user_session_path(method: :delete) %>"><i class="fi-unlock icons"></i></a></td><td class="nav-link"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %></td></tr>
   <% end %></h4>
