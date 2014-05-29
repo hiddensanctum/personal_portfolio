@@ -1,14 +1,22 @@
+var menu_open = false;
+
 var button_click_menu = function() {
-  var clicked = false;
   $("#topbar-content").click(function() {
-    clicked = menu_move(clicked);
+    menu_open = menu_move(menu_open);
   });
 }
 
 var mobile_swipe_menu = function() {
-  var swiped = false;
-  Hammer(window).on("swipe", function(event) {
-    swiped = menu_move(swiped);
+  Hammer(window).on("swipeleft", function(event) {
+    if (menu_open) {
+      menu_open = menu_move(menu_open);
+    }
+  });
+
+  Hammer(window).on("swiperight", function(event) {
+    if (!menu_open) {
+      menu_open = menu_move(menu_open);
+    }
   });
 }
 
@@ -20,8 +28,9 @@ var menu_move = function(status) {
     $("#sidebar-wrapper").animate({
       'margin-left': '-160px'
     }, { duration: 100 });
+    $("#page-content-wrapper").css('width', $('#page-content-wrapper').width() + 80);
     $("#page-content-wrapper").animate({
-      'left': '-10'
+      'margin-left': '-10'
     }, {
       duration: 100,
       complete: function() { $("#page-content-wrapper").css('position', 'initial'); }
@@ -34,17 +43,20 @@ var menu_move = function(status) {
     $("#sidebar-wrapper").animate({
      'margin-left': '-80px'
    }, { duration: 100 });
-    $("#page-content-wrapper").css('position', 'absolute');
+    $("#page-content-wrapper").css('width', $('#page-content-wrapper').width() - 80);
     $("#page-content-wrapper").animate({
-      'left': '80px'
+      'margin-left': '80px'
     }, { duration: 100 });
     return true;
   }
 }
 
 var ready = function() {
-  button_click_menu();
-  mobile_swipe_menu();
+  if ($(window).width() <= 640) {
+    button_click_menu();
+    mobile_swipe_menu();
+  }
+
 
   $('#homepage-title').typed({
     strings: ["Hello! I am a Full Stack Developer"],
