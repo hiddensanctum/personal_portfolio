@@ -133,6 +133,8 @@ pre {
     font-size: 1.6em;
   }
   .nav {
+    font-size: 2em;
+    padding: 0;
     text-align: center;
     margin: 0;
   }
@@ -179,9 +181,6 @@ pre {
     text-align: center;
     font-size: 2em;
     padding: 0 10px;
-  }
-  .icons {
-    font-size: 1.5em;
   }
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
