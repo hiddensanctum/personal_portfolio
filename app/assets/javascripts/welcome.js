@@ -9,13 +9,13 @@ var button_click_menu = function() {
 }
 
 var mobile_swipe_menu = function() {
-  Hammer(window).on("swipeleft", function(event) {
+  Hammer(window).on("dragleft", function(event) {
     if (menu_open && $('#topbar-wrapper').css('display') != 'none') {
       menu_open = menu_move(menu_open);
     }
   });
 
-  Hammer(window).on("swiperight", function(event) {
+  Hammer(window).on("dragright", function(event) {
     if (!menu_open && $('#topbar-wrapper').css('display') != 'none') {
       menu_open = menu_move(menu_open);
     }
