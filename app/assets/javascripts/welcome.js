@@ -32,7 +32,7 @@ var menu_move = function(status) {
     }, { duration: 100 });
     $("#page-content-wrapper").css('width', $('#page-content-wrapper').width() + 80);
     $("#page-content-wrapper").animate({
-      'margin-left': '-10'
+      'margin-left': '0'
     }, {
       duration: 100,
       complete: function() { $("#page-content-wrapper").css('position', 'initial'); }
