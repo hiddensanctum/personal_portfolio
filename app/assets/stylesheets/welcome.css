@@ -17,6 +17,9 @@ a {
 a:hover {
   color: #8B364D;
 }
+a:active {
+  color: #8B364D;
+}
 .box {
   background-color: #8B364D;
   width: 20%;
