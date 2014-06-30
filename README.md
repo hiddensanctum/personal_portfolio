@@ -15,7 +15,7 @@ This portfolio site allows the admin to add new blog posts and projects that the
 ## Future Features
 
 * Integration with Google Analytics
-* Add custom admin interface
+* Add custom admin interface for posts
 * Add D3 Charts
 
 ## Known Issues
