@@ -17,6 +17,7 @@
 //= require hammer.min.js
 //= require typed
 //= require foundation
+//= require d3.min.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
