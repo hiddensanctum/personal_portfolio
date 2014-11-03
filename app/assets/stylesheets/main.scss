@@ -74,6 +74,8 @@ a:active {
 // nav bar css
 .nav {
   text-align: center;
+  max-width: $max-width;
+  margin: auto;
 
   ul li {
     font-size: 12px;
@@ -84,6 +86,9 @@ a:active {
   }
   ul li.title {
     border-bottom: none;
+    h1 {
+      color: #666;
+    }
   }
 }
 
@@ -116,8 +121,9 @@ a:active {
 
 .zen-container {
   max-width: $max-width;
-  margin: 0 auto;
-  padding: 15px
+  overflow: hidden;
+  margin: 50px auto;
+  padding: 15px;
 }
 
 .header {
