@@ -1,0 +1,179 @@
+// Variables
+$primary-font:        'Raleway', sans-serif;
+$max-width:           800px;
+
+// Adobe Kuler Color Variables
+$zen-color-1:         #10222B;  //dark blue
+$zen-color-2:         #95AB63;  //dark tea
+$zen-color-3:         #BDD684;  //green tea green
+$zen-color-4:         #E2F0D6;  //light green
+$zen-color-5:         #F6FFE0;  //pale green
+
+// General Colors
+$white:               #FFFFFF;
+$off-white:           #EEEFF7;
+
+body {
+  font-family: $primary-font;
+  font-weight: 300;
+  background: $white;
+  color: $zen-color-1;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font;
+  color: $zen-color-1;
+}
+a {
+  font-family: $primary-font;
+  color: gray;
+}
+a:hover {
+  color: $zen-color-2;
+}
+a:active {
+  color: $zen-color-2;
+}
+
+// sidebar css
+.box {
+  background-color: $zen-color-1;
+  width: 20%;
+  float: left;
+}
+
+.hex:before {
+  content: " ";
+  width: 0; height: 0;
+  border-bottom: 30px solid #6C6;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+  position: absolute;
+  top: -30px;
+}
+
+.hex {
+  margin-top: 30px;
+  width: 104px;
+  height: 60px;
+  background-color: #6C6;
+  position: relative;
+}
+
+.hex:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -30px;
+  border-top: 30px solid #6C6;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+
+// nav bar css
+.nav {
+  text-align: center;
+
+  ul li {
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 15px;
+    border-bottom: 1px solid $off-white;
+  }
+  ul li.title {
+    border-bottom: none;
+  }
+}
+
+// topbar css
+.zen-nav {
+  // background: rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  .top-bar {
+    background: none;
+    max-width: $max-width;
+    margin: 0 auto;
+    color: $zen-color-1;
+    h1, h2, h3, h4, h5, h6, a {
+      font-family: $primary-font;
+      color: $zen-color-1;;
+    }
+    .name h1 a {
+      color: $white;
+      font-size: 1.5em;
+    }
+    .right li a {
+      color: $white;
+    }
+  }
+}
+
+.zen-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 15px
+}
+
+.header {
+  // background: url('background.jpg') center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+
+.overlay {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // height: 100%;
+  // width: 100%;
+  // background-color: rgba(0,0,0,0.4);
+}
+.top-bar-section ul {
+  background: transparent;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: transparent;
+  color: #fff;
+  font-size: 1em;
+}
+
+//
+#loader {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: $zen-color-2;
+}
+#profile-title {
+  display: none;
+  max-width: 500px;
+  max-height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  h1, h6 {
+    color: #fff;
+  }
+}
+#profile-title .fa {
+  padding: 0 10px;
+  color: $zen-color-2;
+}

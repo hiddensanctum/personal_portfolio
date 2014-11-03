@@ -6,7 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "James Chuang's Portfolio" %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -15,37 +15,7 @@
   </head>
 
   <body>
-    <div id="wrapper">
-      <div id="topbar-wrapper">
-        <div id="topbar-content">
-          <a class="menu-icon"><i id="menu" class="fi-list icons"></i></a>
-        </div>
-      </div>
-      <div id="sidebar-wrapper">
-        <div id="sidebar-content">
-          <div id="title">
-            <h1>James Chuang</h1>
-            <h6 class="center">Full Stack Developer located in Seattle</h6>
-          </div>
-          <%= render 'layouts/nav' %>
-          <div class="row" id="intro">
-            <p>I am a full stack developer with a background in Social/Cyber Psychology. I studied at <a href="http://www.codefellows.org">Code Fellows</a> and have a Bachelors of Science in Psychology from the <a href="http://www.umd.edu/">University of Maryland</a>.</p>
-            <p>My mission is to bridge the gap between Psychology and Technology to create a more user friendly experience.</p>
-            <div class="text-center">
-              <h4>Get in Touch:</h4>
-              <%= link_to image_tag("email.png"), "mailto:jameschuang13@gmail.com" %>
-              <%= link_to image_tag("github.png"), "https://github.com/hiddensanctum" %>
-              <%= link_to image_tag("linkedin.png"), "http://www.linkedin.com/pub/james-chuang/49/249/564" %>
-              <%= link_to image_tag("twitter.png"), "https://twitter.com/N3dd1h" %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="page-content-wrapper">
-        <div class="page-content">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= render 'layouts/nav' %>
+    <%= yield %>
   </body>
 </html>

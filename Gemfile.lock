@@ -61,13 +61,6 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
     coderay (1.1.0)
-    coffee-rails (4.0.1)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.7.0)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -99,6 +92,8 @@ GEM
       net-ssh (>= 2.1.3)
     fog-json (1.0.0)
       multi_json (~> 1.0)
+    font-awesome-rails (4.1.0.0)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     foundation-rails (5.2.1.0)
       railties (>= 3.1.0)
@@ -193,10 +188,6 @@ GEM
     ruby_parser (3.4.1)
       sexp_processor (~> 4.1)
     sass (3.3.4)
-    sass-rails (4.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -255,10 +246,10 @@ DEPENDENCIES
   brakeman
   capybara-webkit
   carrierwave
-  coffee-rails (~> 4.0.0)
   devise
   figaro
   fog
+  font-awesome-rails
   foundation-rails
   foundation-will_paginate
   friendly_id (~> 5.0.0)
@@ -276,7 +267,6 @@ DEPENDENCIES
   rails_12factor
   redcarpet
   rmagick
-  sass-rails
   sdoc
   simplecov
   sqlite3

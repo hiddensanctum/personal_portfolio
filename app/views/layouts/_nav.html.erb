@@ -1,10 +1,11 @@
-<ul class="nav">
-  <a href="<%= root_path %>"><li><i class="fi-home icons"></i><p>Home</p></li></a>
-  <a href="<%= posts_path %>"><li><i class="fi-book icons"></i><p>Blog</p></li></a>
-  <a href="<%= skills_path %>"><li><i class="fi-html5 icons"></i><p>Skills</p></li></a>
-  <a href="<%= projects_path %>"><li><i class="fi-tablet-portrait icons"></i><p>Projects</p></li></a>
-  <a href="https://dl.dropboxusercontent.com/u/89198540/James_Chuang_Resume.pdf"><li><i class="fi-page-csv icons"></i><p>Resume</p></li></a>
-  <% if current_user.present? %>
-    <%= link_to destroy_user_session_path, method: :delete do %><li><i class='fi-unlock icons'></i><p>Sign Out</p></li><% end %>
-  <% end %>
-</table>
+<div class="nav">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Journel</a></li>
+    <li class="title"><h1>JLC</h1></li>
+    <li><a href="#">Resume</i></a></li>
+    <li><a href="#">Work</i></a></li>
+    <li><a href="#">Contact</i></a></li>
+  </ul>
+</div>

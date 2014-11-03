@@ -12,5 +12,6 @@
  *= require foundation_and_overrides
  *= require jquery.fancybox
  *= require foundation-icons
+ *= require font-awesome
  *= require_tree .
  */
