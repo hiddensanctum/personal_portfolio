@@ -4,7 +4,7 @@ NewPortfolio::Application.routes.draw do
   resources :projects
 
   devise_for :users
-  # resources :posts
+  resources :posts
   get 'journel', :to => 'posts#index'
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'skills', :to => 'tskills#index'
