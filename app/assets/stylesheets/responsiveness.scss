@@ -1,0 +1,46 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+  RESPONSIVE LAYOUT
+
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+// SIZING
+$site-max-width:        1200px  !default;
+$site-max-width-mobile: 650px   !default;
+
+// BREAKPOINTS
+$breakpoint-small:      401px   !default;
+$breakpoint-medium:     768px   !default;
+$breakpoint-large:      1050px  !default;
+$breakpoint-xlarge:     1200px  !default;
+
+// MEDIA QUERIES
+// Aliases
+$tiny:        'only screen and (max-width: #{$breakpoint-small - 1})';  // Alias for $tiny-only
+$small:       'only screen and (min-width: #{$breakpoint-small})';      // Alias for $small-up
+$medium:      'only screen and (min-width: #{$breakpoint-medium})';     // Alias for $medium-up
+$large:       'only screen and (min-width: #{$breakpoint-large})';      // Alias for $large-up
+$xlarge:      'only screen and (min-width: #{$breakpoint-xlarge})';     // Alias for $xlarge-only
+
+// Constrained
+$tiny-only:   'only screen and (max-width: #{$breakpoint-small - 1})';
+$small-only:  'only screen and (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1})';
+$medium-only: 'only screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1})';
+$large-only:  'only screen and (min-width: #{$breakpoint-large}) and (max-width: #{$breakpoint-xlarge - 1})';
+$xlarge-only: 'only screen and (min-width: #{$breakpoint-xlarge})';
+
+// Maximums
+$small-down:  'only screen and (max-width: #{$breakpoint-small})';
+$medium-down: 'only screen and (max-width: #{$breakpoint-medium})';
+$large-down:  'only screen and (max-width: #{$breakpoint-large})';
+
+// Minimums
+$small-up:    'only screen and (min-width: #{$breakpoint-small})';
+$medium-up:   'only screen and (min-width: #{$breakpoint-medium})';
+$large-up:    'only screen and (min-width: #{$breakpoint-large})';
+
+// What?
+$mobile-override: 'only screen and (max-width: #{$site-max-width-mobile})';
+
+// Higher pixel densities
+$retina:  'only screen and (min-resolution: 2dppx)';

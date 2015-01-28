@@ -1,11 +1,16 @@
-<div class="nav">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="/journel">Journel</a></li>
-    <li class="title"><h1>JLC</h1></li>
-    <li><a href="#">Resume</i></a></li>
-    <li><a href="#">Work</i></a></li>
-    <li><a href="#">Contact</i></a></li>
-  </ul>
+<div class="nav-container">
+  <div class="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/journel">Journel</a></li>
+      <li class="title"><h2>James Chuang</h2></li>
+      <li><a href="#">Resume</i></a></li>
+      <li><a href="/projects">Projects</i></a></li>
+      <li><a href="#">Contact</i></a></li>
+      <% if current_user.present? %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% end %></h4>
+    </ul>
+  </div>
 </div>

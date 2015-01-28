@@ -1,10 +1,6 @@
-<div class="medium-12 large-12 columns">
-  <h2>Portfolio</h2>
-  <div class="text-right">
-    <% if current_user.present? %>
-      <h6><%= link_to image_tag("new.png") + "New Project", new_post_path %></h6>
-    <% end %>
-  </div>
+<div class="projects-container">
+  <h2>Projects</h2>
+  <p>Below are various projects that I have worked on throughout my professional career.</p>
   <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 text-center">
     <% @projects.each do |project| %>
       <li>
@@ -40,5 +36,10 @@
   </ul>
   <div class="pagination-centered">
     <%= foundation_paginate @posts %>
+  </div>
+  <div class="text-right">
+    <% if current_user.present? %>
+      <h6><%= link_to image_tag("new.png") + "New Project", new_post_path %></h6>
+    <% end %>
   </div>
 </div>

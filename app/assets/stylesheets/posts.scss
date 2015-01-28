@@ -1,0 +1,39 @@
+$max-width:           950px;
+
+.blog-overlay {
+  background: url("/assets/blog.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 60px;
+  height: 80%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.about-overlay {
+  background: url("/assets/about.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 60px;
+  height: 80%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.blog-post {
+  max-width: $max-width;
+  margin: auto;
+  padding: 20px 45px;
+  h1, h2, h3, h4, h5 {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+}
+
+.projects-container {
+  max-width: $max-width;
+  margin: 60px auto;
+  padding: 10px 45px;
+}

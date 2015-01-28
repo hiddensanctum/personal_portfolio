@@ -1,5 +1,5 @@
-<div class="medium-12 large-5 columns blog-post">
-  <h2>Blog</h2>
+<div class="blog-overlay"></div>
+<div class="blog-post">
   <% @posts.each do |post| %>
       <h4><%= l post.created_at, format: :long %></h4>
       <h4><small>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></small></h4>

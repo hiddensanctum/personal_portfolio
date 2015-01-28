@@ -1,6 +1,6 @@
 // Variables
 $primary-font:        'Raleway', sans-serif;
-$max-width:           800px;
+$max-width:           950px;
 
 // Adobe Kuler Color Variables
 $zen-color-1:         #10222B;  //dark blue
@@ -23,11 +23,11 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $primary-font;
-  color: $zen-color-1;
+  color: $white;
 }
 a {
   font-family: $primary-font;
-  color: gray;
+  color: $white;
 }
 a:hover {
   color: $zen-color-2;
@@ -37,25 +37,32 @@ a:active {
 }
 
 // nav bar css
-.nav {
-  display: none;
-  text-align: center;
-  margin: auto;
-  width: 100%;
-  background: $white;
+.nav-container {
+  // display: none;
+  z-index: 9;
+  background: rgba(255,255,255,1);
   position: fixed;
-
+  width: 100%;
+  top: 0;
+  @media only screen and (max-width: 401px) {
+    position: relative;
+  }
+}
+.nav {
+  max-width: $max-width;
+  margin: auto;
+  text-align: center;
   ul {
     margin: 0;
     li {
-      font-size: 12px;
+      font-size: 14px;
       display: inline-block;
       margin: 0 10px;
       padding: 0 15px;
-      .title {
-        border-bottom: none;
+      a {
+        color: $zen-color-1;
       }
-      h1 {
+      h1, h2, h3 {
         color: #666;
       }
     }
@@ -69,11 +76,20 @@ a:active {
     height: 100%;
     margin: 0;
     list-style: none;
+    background: url("/assets/background.jpeg");
+    background-size: cover;
+    @media only screen and (max-width: 401px) {
+      height: 600px;
+    }
     li {
       float: left;
       width: 25%;
-      background: #000;
       height: 100%;
+      background: rgba(0,0,0,0.6);
+      @media only screen and (max-width: 401px) {
+        width: 100%;
+        height: 150px;
+      }
       a {
         text-decoration: none;
         position: relative;
@@ -81,20 +97,36 @@ a:active {
         height: 100%;
         text-align: center;
         display: block;
+        p {
+          text-align: center;
+          margin: 0 20%;
+          padding: 20px;
+          color: #ccc;
+          border-top: 1px dotted #ccc;
+          @media only screen and (max-width: 401px) {
+            display: none;
+          }
+        }
       }
       hgroup {
         position: relative;
         width: 100%;
         height: 50%;
         display: table;
+        @media only screen and (max-width: 401px) {
+          height: 100%;
+        }
       }
       .table-cell {
         display: table-cell;
         vertical-align: bottom;
+        @media only screen and (max-width: 401px) {
+          vertical-align: middle;
+        }
       }
     }
     li:hover {
-      background: #ccc;
+      background: rgba(0,0,0,0.3);
     }
   }
 }
