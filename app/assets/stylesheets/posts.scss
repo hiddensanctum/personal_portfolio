@@ -9,21 +9,15 @@ $max-width:           950px;
   height: 80%;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
-}
-.about-overlay {
-  background: url("/assets/about.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin-top: 60px;
-  height: 80%;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  @media only screen and (max-width: 401px) {
+    margin-top: 0;
+  }
 }
 .blog-post {
   max-width: $max-width;
   margin: auto;
   padding: 20px 45px;
+
   h1, h2, h3, h4, h5 {
     color: #000;
   }

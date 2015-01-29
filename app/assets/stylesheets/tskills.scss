@@ -1,10 +1,23 @@
-$max-width:           950px;
+$max-width:           760px;
 
 .white-container {
   background: #fff;
 }
 .offwhite-container {
   background: #EEEFF7;
+}
+.about-overlay {
+  background: url("/assets/about.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 60px;
+  height: 80%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  @media only screen and (max-width: 401px) {
+    margin-top: 0;
+  }
 }
 .about-container {
   max-width: $max-width;
