@@ -1,0 +1,46 @@
+$max-width:           760px;
+
+.white-container {
+  background: #fff;
+}
+.offwhite-container {
+  background: #EEEFF7;
+}
+.about-overlay {
+  background: url("/assets/about.jpeg");
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  height: 50%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  @media only screen and (max-width: 925px) {
+    margin-top: 0;
+  }
+}
+.about-container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 20px 45px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 925px) {
+    padding: 15px;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: #000;
+  }
+  a {
+    color: #000;
+  }
+  .img-portfolio {
+    max-height: 80px;
+  }
+  .img-portfolio-container {
+    text-align: center;
+  }
+  .row {
+    margin-bottom: 30px;
+  }
+}
