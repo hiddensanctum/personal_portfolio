@@ -8,6 +8,7 @@ NewPortfolio::Application.routes.draw do
   get 'journel', :to => 'posts#index'
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', :to => 'tskills#index'
+  get 'contact', :to => 'welcome#contact'
 
   root :to => "welcome#index"
 
