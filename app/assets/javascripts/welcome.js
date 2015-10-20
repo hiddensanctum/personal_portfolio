@@ -1,3 +1,5 @@
 $( document ).ready(function() {
-  // $('.nav-container').hide();
+  $('#menu').click(function(){
+    $('#nav-dropdown').slideToggle();
+  })
 });

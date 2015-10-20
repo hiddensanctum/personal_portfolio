@@ -10,12 +10,11 @@ $max-width:           760px;
   background: url("/assets/about.jpeg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   margin-top: 60px;
   height: 80%;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
-  @media only screen and (max-width: 401px) {
+  @media only screen and (max-width: 925px) {
     margin-top: 0;
   }
 }
